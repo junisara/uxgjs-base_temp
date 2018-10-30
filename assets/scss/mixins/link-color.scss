@@ -1,0 +1,83 @@
+// A에 대한 믹스인
+// $text-color : 글자의 색상
+// $hover-color: hover일때 색상 생략기 기본 값적용
+// 사용법 : @include link-color(1);
+@mixin link-color($color-kind: 9) {
+
+    @if $color-kind == 1 {
+        $color : $theme-color-main;
+
+        color:       $color;
+        &[href] {
+            @include hover-focus {
+                color: darken($color, 25%);
+                text-decoration: none;
+            }
+        }
+    }
+    @else if $color-kind == 2 {
+        $color : $theme-color-accent;
+
+        color:       $color;
+        &[href] {
+            @include hover-focus {
+                color: darken($color, 25%);
+                text-decoration: none;
+            }
+        }
+    }
+    @else if $color-kind == 3 {
+        $color : $gray-500;
+
+        color:       $color;
+        &[href] {
+            @include hover-focus {
+                color: darken($color, 35%);
+                text-decoration: none;
+            }
+        }
+    }
+    @else if $color-kind == 4 {
+        $color : $gray-600;
+
+        color:       $color;
+        &[href] {
+            @include hover-focus {
+                color: darken($color, 35%);
+                text-decoration: none;
+            }
+        } 
+    }
+    @else if $color-kind == gnb {
+        $color : #fff;
+
+        color: $color;
+            @include hover-focus {
+                color: $theme-color-main-300; 
+                text-decoration: none;
+            }
+    }
+    @else if $color-kind == gnbAffix {
+        $color : $gray-600;
+
+        color: $color;
+            @include hover-focus {
+                color: darken($color, 35%); 
+                text-decoration: none;
+            }
+    }
+    @else {
+        $color :  $link-color;
+        $hcolor : $hover-color;
+
+        color:       $color;
+        &[href] {
+            @include hover-focus {
+                color: $hcolor;
+                text-decoration: none;
+            }
+        } 
+    }
+
+  }
+

@@ -1,0 +1,1 @@
+var skin_cfg={content_width:"800",kind:"change",topmenu_icon:{1:"xi-tags",2:"xi-map-marker",3:"xi-pen",4:"xi-cog"},sidebar_icon:{1:"xi-palette",2:"xi-gift-o",3:"xi-share-alt-o",4:"xi-puzzle"},sns:{},google_analytics:"UA-38505540-2"};

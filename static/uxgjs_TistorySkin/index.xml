@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<information>
+		<name>uxgjs_TistorySkin-beta</name>
+		<version>1.0.0</version>
+		<description><![CDATA[uxgjs_TistorySkin-beta 스킨은 저렴하게 판매하는 스킨 입니다.]]></description>
+		<license><![CDATA[구매 후 자유 수정 가능 / 재배포 금지 / 저작권 표시 제거 및 수정 금지]]></license>
+	</information>
+	<author>
+		<name>junisara</name>
+		<homepage>http://uxgjs.tistory.com</homepage>
+		<email>junisara@gmail.com</email>
+	</author>
+	<default>
+		<recentEntries>4</recentEntries>
+		<recentComments>5</recentComments>
+		<recentTrackbacks>5</recentTrackbacks>
+		<itemsOnGuestbook>5</itemsOnGuestbook>
+		<tagsInCloud>20</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>1</expandComment>
+		<expandTrackback>0</expandTrackback>
+		<lengthOfRecentNotice>40</lengthOfRecentNotice>
+		<lengthOfRecentEntry>30</lengthOfRecentEntry>
+		<lengthOfRecentComment>40</lengthOfRecentComment>
+		<lengthOfRecentTrackback>40</lengthOfRecentTrackback>
+		<lengthOfLink>40</lengthOfLink>
+		<commentMessage>
+			<none>0</none>
+			<single>1</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>0</none>
+			<single>1</single>
+		</trackbackMessage>
+		<contentWidth>900</contentWidth>
+		<toolbar>white</toolbar>
+	</default>
+</skin>

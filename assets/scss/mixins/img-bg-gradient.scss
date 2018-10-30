@@ -1,0 +1,31 @@
+
+
+// 설명   : 이미지가 있는 DIV의 위에 글씨가 잘 보이도록 상단 또는 하단에 투명그라데이션을 깔아줍니다.
+// 사용법 :  @include img-bg-gradient(top);
+
+@mixin img-bg-gradient($direction) {
+    
+    @if $direction == top {
+        $direction  : to top;
+    } @else {
+        $direction  : to bottom;
+    }
+    $start      : rgba(0,0,0,0.3);
+    $end        : rgba(0,0,0,0.2);
+
+    position: relative;
+    &:before {
+        content : '';
+        position: absolute;
+        top:0; bottom:0; left:0; right:0;
+        background: linear-gradient( $direction, $end, $end, $end, $end, $end, $end, $start );
+        z-index: 2;
+      }
+    &:after {
+        content : '';
+        position: absolute;
+        top:0; bottom:0; left:0; right:0;
+        background: linear-gradient( $direction, $start , $end );
+        z-index: 1;
+      }
+  }

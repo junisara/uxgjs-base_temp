@@ -1,0 +1,14 @@
+s_list,
+s_rplist,
+s_article_rep,
+s_guest,
+s_paging,
+s_notice_rep,
+s_notice_rep,
+s_article_protected,
+s_local,
+s_tag {
+  display: none; }
+
+s_article_rep {
+  display: block; }
