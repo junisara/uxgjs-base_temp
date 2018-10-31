@@ -1,6 +1,6 @@
 <template>
 <div>
-  <button type="button" class="btn btn-warning btn-lg btn-block mt-2"  v-if="!windowEmailLogin && !windowEmailSignup" v-on:click.prevent="EmailLoginButton"><i class='xi-mail'></i> 이메일로 로그인</button>
+  <button type="button" class="btn btn-warning btn-lg btn-block mt-2"  v-if="!windowEmailLogin && !windowEmailSignup" v-on:click.prevent="EmailLoginButton('in')"><i class='xi-mail'></i> 이메일로 로그인</button>
 
     <transition name="email" mode="out-in">
     <div id="email-login" class="email-login" v-if="windowEmailLogin && !windowEmailSignup" key="login">
@@ -23,13 +23,13 @@
 
         <div v-if="formError.length > 0" v-text="formErrorKr" class="message alert alert-danger"></div>
 
-        <div class="form-group member-join mt-3">
+        <!-- <div class="form-group member-join mt-3">
           <small>아직 회원가입을 하지 않은경우 <a href="#" @click.prevent="EmailSignupButton()"> 회원가입 </a>을 먼저해주세요.</small>
-        </div>
+        </div> -->
 
         <div class="btn-wrap text-center mt-5">
           <button class="btn btn-primary" type="submit">로그인</button>
-          <button class="btn btn-outline-primary" @click="close()" >닫기</button>
+          <button class="btn btn-outline-primary" @click.prevent="close()" >닫기</button>
         </div>
       </form>
     </div>
@@ -53,7 +53,7 @@
         <div v-if="formError.length > 0" v-text="formErrorKr" class="message alert alert-danger"></div>
 
         <div class="form-group member-login mt-3">
-          <small>이미 회원가입을 하신 경우 <a href="#" @click.prevent="EmailLoginButton('in')"> 로그인 </a>만 하면 됩니다.</small>
+          <small>이미 회원가입을 하신 경우 <a href="#" @click.prevent="EmailLoginButton()"> 로그인 </a>만 하면 됩니다.</small>
         </div>
 
         <div class="btn-wrap text-center mt-5">
@@ -114,6 +114,12 @@ export default {
         if (this.formError === "There is no user record corresponding to this identifier. The user may have been deleted.") {
           return "회원가입이 되어 있지 않아요 ^^ 아이디가 잘못된 것이 아니면 회원가입을 먼저 해주세요~"
         }
+        if (this.formError === "The email address is badly formatted.") {
+          return "이메일 정보가 맞지 않습니다. 이메일 정보를 다시 확인해 주세요."
+        }
+
+
+
 
     }
 
@@ -124,7 +130,7 @@ export default {
       parentData: function(newVal, oldVal) { // watch it
         console.log('Prop changed: ', newVal, ' | was: ', oldVal)
         if( newVal ) {
-          this.EmailSignupButton ();
+          this.EmailSignupButton();
         }
 
       }
@@ -132,24 +138,27 @@ export default {
 
   methods: {
 
-    // signUpCheck() {
-    //   console.log('parentData :', this.parentData);
-
-    //   if( this.parentData ) {
-    //    EmailSignupButton ();
-    //   }
-    // },
-
     EmailLoginButton (yn) {
+
+      if(yn == 'in')  {
+        console.log('yn1', yn);
+
       this.windowEmailLogin = true;
       this.windowEmailSignup = false;
-      this.$emit('emailLogin', yn)
+        this.$emit('emailLogin', 'login-in')
+      } else {
+      console.log('yn2', yn);
+
+      this.windowEmailLogin = false;
+      this.windowEmailSignup = false;
+      this.$emit('emailLogin', 'login')
+      }
     },
 
-    EmailSignupButton (yn) {
+    EmailSignupButton () {
       this.windowEmailLogin = false;
       this.windowEmailSignup = true;
-      this.$emit('emailLogin', yn)
+      this.$emit('emailLogin', 'join')
     },
 
     signPasswordCheck() {
