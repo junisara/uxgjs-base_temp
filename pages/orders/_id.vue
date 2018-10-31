@@ -52,38 +52,23 @@
           <button @click="orderAdd" v-if="!step" class="btn btn-danger btn-lg mr-2"><i class="xi-won"></i> 주문하기</button>
           <button @click="$router.replace($route.query.redirect || '/')" class="btn btn-outline-secondary btn-lg">{{ !step ? '취소':'닫기'}}</button>
         </div>
-
-
-
         <div class="row justify-content-center">
           <div class="col-12">
             <LicenseText />
           </div>
         </div>
-
       </div>
-
-
       <!-- 로그인 요청 화면 -->
       <div v-else class="col-10 order-popup">
         <h1 class="title">로그인 해주세요</h1>
         <div class="alert alert-primary text-center">
             주문을 하기전에 로그인을 먼저 해야 합니다.
-
-
              <div class="btn-wrap mt-5 mb-2">
               <nuxt-link class="btn btn-primary mr-2" to="/account/login" title="로그인">로그인</nuxt-link>
               <button @click="$router.replace($route.query.redirect || '/')" class="btn btn-outline-secondary">닫기</button>
             </div>
         </div>
-
-
-          <div class="form-group member-join mt-3 text-center">
-            아직 회원가입을 하지 않은경우 <nuxt-link :to="{ path: '/account/login', params: { windowSignup: true }}"  title="회원가입"><b>회원가입</b></nuxt-link> 을 먼저해주세요.
-          </div>
-
       </div>
-
     </div>
 </template>
 

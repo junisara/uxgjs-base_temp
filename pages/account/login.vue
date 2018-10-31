@@ -6,7 +6,7 @@
       <GoogleLogin v-if="windowEmail" />
       <EmailLogin :parentData="windowSignup" v-on:emailLogin="windowCtrl" />
     </div>
-     <div class="form-group member-join mt-3" >
+     <div class="form-group member-join mt-5" >
         <span v-if="windowEmail">아직 회원가입을 하지 않은경우 <a href="#" @click.prevent="EmailSignupButton()"> 회원가입 </a>을 먼저해주세요.</span>
       </div>
   </div>
@@ -63,8 +63,15 @@ export default {
 <style lang="scss">
 .login-wrap {
   width: 100%;
-  max-width: 420px;
-  padding: 15px;
+  max-width: 30rem;
+  padding: 1.5rem;
   margin: auto;
+  .member-join {
+    a {
+      font-weight: 600;
+      font-size: 1.2rem;
+      @include a-variant($theme-color-main);
+    }
+  }
 }
 </style>
