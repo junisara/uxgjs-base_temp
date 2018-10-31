@@ -1,0 +1,1683 @@
+<!-- Site built using grunt includes! -->
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>http://localhost:9100 :: 블로그 제목 입니다.</title>
+        <meta name="title" content="http://localhost:9100 :: 블로그 제목 입니다.">
+        <meta name="description" Content="안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다.">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <link rel="alternate" type="application/rss+xml" title="블로그 제목 입니다." href="[##_rss_url_##]">
+        <script>
+            var skin_cfg = {
+                /****************************************************************
+                // 1. 블로그의 본문이 나오는 부분의 넓이를 지정합니다.
+                //    아무값는 없는 경우는 반응형 기본 값으로 나옵니다.   
+                //    예제>
+                //     "contentWidth" : "800"
+                ****************************************************************/
+                "content_width": "",
+                /****************************************************************
+                // 2. 1차 메인 메뉴에 대한 아이콘을 설정
+                //    아이콘은 http://xpressengine.github.io/XEIcon/2.2.0/library_common.html에서 선택
+                //    순서는 상단부터 순서대로 지정 됨
+                //    "kind" 는 "add"와 "change"중에 선택하면 되고 
+                //    "add"인경우는 메뉴명 앞에 아이콘을 붙히고
+                //    "change"는 메뉴명을 아이콘으로 대체함.
+                //    예제>
+                //     "kind":"change",  
+                //     "topmenu_icon": {  
+                //         "1": "xi-palette",
+                //         "2": "xi-gift-o",
+                //         "3": "xi-share-alt-o"
+                //     },  
+                ****************************************************************/
+                "kind": "change",
+                "topmenu_icon": {
+                    "1": "xi-tags",
+                    "2": "xi-pen",
+                    "3": "xi-cog"
+                },
+                /****************************************************************
+                // 3. 1차 서브 메뉴에 대한 아이콘을 설정
+                //    아이콘은 http://xpressengine.github.io/XEIcon/2.2.0/library_common.html에서 선택
+                //    순서는 상단부터 순서대로 지정 됨
+                //    예제>
+                //     "sidebar_icon": {                        
+                //         "1": "xi-palette",
+                //         "2": "xi-gift-o",
+                //         "3": "xi-share-alt-o"
+                //     },  
+                ****************************************************************/
+                "sidebar_icon": {
+                    "1": "xi-palette",
+                    "2": "xi-gift-o",
+                    "3": "xi-share-alt-o",
+                    "4": "xi-puzzle"
+                },
+                /****************************************************************
+                // 4. 사용하는 개인 SNS에 대한 설정
+                //    각 SNS의 ID를 작성하면 자동으로 링크가 생성됨 
+                //    예제>
+                //     "sns": {  
+                //         "facebook": "uxgjs", // 페이스북 아이디
+                //         "twitter": "uxgjs", // 트위터 아이디
+                //         "google": "123456789012345678902", // 구글플러스 아이디번호
+                //         "kakaostory": "uxgjs" // 카카오스토리 아이디
+                //     }, 
+                ****************************************************************/
+                "sns": {},
+                /****************************************************************
+                // 5. 댓글달기의 해시태그를 이용하여 구분기능 추가
+                //    첫번째는 "일반" 버튼이 자동으로 입력되어 있음
+                //    예제>
+                //     "comment_kind": {                         
+                //         "1": "문의",
+                //         "2": "A/S",
+                //         "3": "구매"
+                //     }, 
+                ****************************************************************/
+                "comment_kind": {
+                    "1": "문의",
+                    "2": "A/S",
+                    "3": "구매"
+                }
+            };
+        </script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/xeicon/2/xeicon.min.css">
+        <link rel="stylesheet" href="./images/vendor.css">
+        <link rel="stylesheet" href="./style.css">
+        <!-- build:remove -->
+        <link rel="stylesheet" href="./images/temp.css">
+        <!-- /build -->
+    </head>
+    <!--_doc문서 배포일 경우 최상단에 화면을 보기위한 네비게이션바를 붙힘-->
+
+<body style="margin-top:8rem">
+    <!--<div id="doc-top-nav">
+        <p class="title">샘플 화면보기</p>
+       
+
+        <div class="selectTheme pull-right theme">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            색상선택
+            <span class="caret"></span>
+        </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">기본</a></li>
+                <li><a href="#">RED</a></li>
+                <li><a href="#">BLUE</a></li>
+                <li><a href="#">GREEN</a></li>
+                <li><a href="#">YELLOW</a></li>
+            </ul>
+        </div>
+    </div>-->
+
+    <ul id="doc-top-nav" class="list-inline">
+        <li class="title">샘플 화면보기</li>
+        <li><a href="#" class="a1">① 리스트 화면</a></li>
+        <li><a href="#" class="a2">② 컨텐츠 화면</a></li>
+        <li><a href="#" class="a3">③ 태그리스트</a></li>
+        <li><a href="#" class="a4">④ 위치리스트</a></li>
+        <li><a href="#" class="a5">⑤ 방명록</a></li>
+        <!--<li><a href="#" class="a6">⑥ 미디어리스트</a></li>-->
+        <li class="selectTheme theme">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                색상선택
+                <span class="caret"></span>
+            </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">기본</a></li>
+                <li><a href="#">빨강</a></li>
+                <li><a href="#">파랑</a></li>
+                <li><a href="#">초록</a></li>
+                <li><a href="#">노랑</a></li>
+            </ul>
+        </li>
+    </ul>
+        <s_t3>
+            <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+            <div id="container">
+                <div id="header" class="">
+                    <nav class="navbar navbar-default navbar-fixed-top">
+                        <div class="logoImage valign-wrapper">
+                            <img src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" class="img-circle logo" alt="Contact Person">
+                        </div>
+                        <!--Host 관리자 정보 자세히 보기-->
+                        <div id="nav-adminMenu" class="thumbnail hoverable nav-adminMenu">
+                            <img src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg">
+                            <div class="caption">
+                                <h3>길동이</h3>
+                                <p>안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다.</p>
+                                <p class="text-center">
+                                    <a href="[##_owner_url_##]" class="btn btn-primary">
+                                        <i class="xi-cog"></i> 관리자</a>
+                                    <a href="[##_owner_url_##]/entry/post" class="btn btn-default">
+                                        <i class="xi-pen"></i> 글쓰기</a>
+                                    <a href="[##_owner_url_##]" class="btn btn-default" id="btn_login_toggle" onclick="loginToggle();">
+                                        <i class="xi-log-in"></i> 로그인</a>
+                                </p>
+                            </div>
+                        </div>
+                        <a class="navbar-brand" href="http://localhost:9100">블로그 제목 입니다.</a>
+                        <a class="navbar-home pull-left" href="http://localhost:9100">
+                            <i class="xi-home xi-2x"></i>
+                        </a>
+                        <div id="navbar">
+                            <a href="category" data-activates="sidebar" class="pull-right category">
+                                <i class="xi-align-justify xi-2x"></i>
+                            </a>
+                            <a href="search" class="pull-right searchBtn">
+                                <i class="xi-search"></i>
+                            </a>
+                            <ul>
+                                <li class="t_menu_tag"><a href="/tag">태그</a></li>
+                                <li class="t_menu_location"><a href="/location">지역로그</a></li>
+                                <li class="t_menu_guestbook"><a href="/guestbook">방명록</a></li>
+                                <li class="t_menu_admin last"><a href="/admin">관리자</a></li>
+                            </ul>
+                            <!--<ul class="nav pull-right blogMenu">
+    <li><a href="http://localhost:9100"><i class="xi-home"></i></a></li>                    
+            
+        <li><a href="tag"><i class="xi-tags"></i></a></li>
+        <li><a href="location"><i class="xi-map-marker"></i></a></li>
+        <li><a href="media"><i class="xi-camera"></i></a></li>
+        <li><a href="guestbook"><i class="xi-pen"></i></a></li>
+        <li><a href="search"><i class="xi-search"></i></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="xi-cog"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="[##_owner_url_##]" ><i class="xi-wrench"></i> 관리자</a></li>
+                <li><a href="[##_owner_url_##]/entry/post"><i class="xi-pen"></i> 글쓰기</a></li>
+                <li><a href="[##_owner_url_##]" id="btn_login_toggle" onclick="loginToggle();"><i class="xi-log-in"></i> 로그인</a></li>
+            </ul>
+        </li>   
+    </ul>-->
+                        </div>
+                        <!--/.nav-collapse -->
+                    </nav>
+                    <!--검색창 보이기 -->
+                    <div class="search shadow">
+                        <div class="container">
+                            <s_search>
+                                <div class="col-sm-8  col-sm-offset-2 input-field">
+                                    <div class="input-group ">
+                                        <input type="text" id="searchbox" name="[##_search_name_##]" class="form-control" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" placeholder="검색어를 입력하세요">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-info submit" type="button" name="action" onclick="[##_search_onclick_submit_##]">
+                                                <i class="xi-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                    <!-- /input-group -->
+                                </div>
+                                <!-- /.col-lg-6 -->
+                            </s_search>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- content start -->
+                    <!--<div id="content" class="col s12 m8 l9">-->
+                    <div id="sidebar" class="side-nav">
+                        <s_sidebar>
+                            <s_sidebar_element>
+                                <!-- 카테고리 리스트 -->
+                                <div class="category">
+                                    <h3>카테고리</h3>
+                                    <ul class="tt_category">
+                                        <li><a class="link_tit" href="/category">분류 전체보기 <span class="c_cnt">(0)</span></a>
+                                            <ul class="category_list">
+                                                <li><a class="link_item" href="/category/테스트 메뉴1">테스트 메뉴1 <span class="c_cnt">(20)</span> </a></li>
+                                                <li><a class="link_item" href="/category/테스트 메뉴2">테스트 메뉴2 <span class="c_cnt">(2330)</span></a>
+                                                    <ul class="sub_category_list">
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                        <li><a class="link_sub_item" href="/category/테스트 메뉴2/테스트 메뉴2-1">테스트 메뉴2-1 <span class="c_cnt">(0)</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="link_item" href="/category/테스트 메뉴3">테스트 메뉴3 <span class="c_cnt">(0)</span></a></li>
+                                                <li><a class="link_item" href="/category/테스트 메뉴3">테스트 메뉴3 <span class="c_cnt">(0)</span></a></li>
+                                                <li><a class="link_item" href="/category/테스트 메뉴3">테스트 메뉴3 <span class="c_cnt">(0)</span></a></li>
+                                                <li><a class="link_item" href="/category/테스트 메뉴3">테스트 메뉴3 <span class="c_cnt">(0)</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </s_sidebar_element>
+                        </s_sidebar>
+                    </div>
+                    <div id='sidenavOverlay'></div>
+                    <div id="entry">
+                        <s_article_rep>
+                            <s_index_article_rep>
+                                <div class="entry">
+                                    <div class="list_wrap">
+                                        <div class="blog-info">
+                                            <div class="container">
+                                                <div class="blogImage">
+                                                    <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" alt="" />
+                                                </div>
+                                                <h1><a href="http://localhost:9100">블로그 제목 입니다.</a></h1>
+                                                <!-- 블로그 정보 -->
+                                                <div class="blogDesc">안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다. </div>
+                                                <div class="userID">길동이</div>
+                                            </div>
+                                        </div>
+                                        <div class="list_content clearfix">
+                                            <s_article_rep_thumbnail>
+                                                <div class="thumbnail_post">
+                                                    <a href="[##_article_rep_link_##]">
+                                                        <!--<img src="//i1.daumcdn.net/thumb/C150x150/?fname=[##_article_rep_thumbnail_raw_url_##]">-->
+                                                        <img class="img-responsive" src="http://i.imgur.com/3cVc1Vg.jpg">
+                                                    </a>
+                                                </div>
+                                            </s_article_rep_thumbnail>
+                                            <div class="desc-info">
+                                                <a href="[##_article_rep_link_##]" class="link_post">
+                                                    <h2 class="tit_post">블로그 글의 제목</h2>
+                                                    <p class="txt_post">날씨.. 외출하기 딱좋은 맑음.. 5월5일과 샌드위치되어 있는 5월4일.. 중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다. 무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다. “아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??” 인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했습니다.</p>
+                                                </a>
+                                                <div class="detail_info">
+                                                    <a href="[##_article_rep_category_link_##]" class="link_cate">카테고리 종류</a>
+                                                    <span class="txt_bar"></span> 2016-10-10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- build:remove -->
+                                <div class="entry">
+                                    <div class="list_wrap">
+                                        <div class="blog-info">
+                                            <div class="container">
+                                                <div class="blogImage">
+                                                    <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" alt="" />
+                                                </div>
+                                                <h1><a href="http://localhost:9100">블로그 제목 입니다.</a></h1>
+                                                <!-- 블로그 정보 -->
+                                                <div class="blogDesc truncate">안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다. </div>
+                                                <div class="userID">길동이</div>
+                                            </div>
+                                        </div>
+                                        <div class="list_content clearfix">
+                                            <s_article_rep_thumbnail>
+                                                <div class="thumbnail_post">
+                                                    <a href="[##_article_rep_link_##]">
+                                                        <!--<img src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">-->
+                                                        <img class="img-responsive" src="http://i.imgur.com/3cVc1Vg.jpg">
+                                                    </a>
+                                                </div>
+                                            </s_article_rep_thumbnail>
+                                            <div class="desc-info">
+                                                <a href="[##_article_rep_link_##]" class="link_post">
+                                                    <h2 class="tit_post">블로그 글의 제목</h2>
+                                                    <p class="txt_post">날씨.. 외출하기 딱좋은 맑음.. 5월5일과 샌드위치되어 있는 5월4일.. 중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다. 무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다. “아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??” 인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했습니다.</p>
+                                                </a>
+                                                <div class="detail_info">
+                                                    <a href="[##_article_rep_category_link_##]" class="link_cate">카테고리 종류</a>
+                                                    <span class="txt_bar"></span> 2016-10-10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entry">
+                                    <div class="list_wrap">
+                                        <div class="blog-info">
+                                            <div class="container">
+                                                <div class="blogImage">
+                                                    <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" alt="" />
+                                                </div>
+                                                <h1><a href="http://localhost:9100">블로그 제목 입니다.</a></h1>
+                                                <!-- 블로그 정보 -->
+                                                <div class="blogDesc truncate">안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다. </div>
+                                                <div class="userID">길동이</div>
+                                            </div>
+                                        </div>
+                                        <div class="list_content clearfix">
+                                            <s_article_rep_thumbnail>
+                                                <div class="thumbnail_post">
+                                                    <a href="[##_article_rep_link_##]">
+                                                        <!--<img src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">-->
+                                                        <img class="img-responsive" src="http://i.imgur.com/3cVc1Vg.jpg">
+                                                    </a>
+                                                </div>
+                                            </s_article_rep_thumbnail>
+                                            <div class="desc-info">
+                                                <a href="[##_article_rep_link_##]" class="link_post">
+                                                    <h2 class="tit_post">블로그 글의 제목</h2>
+                                                    <p class="txt_post">날씨.. 외출하기 딱좋은 맑음.. 5월5일과 샌드위치되어 있는 5월4일.. 중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다. 무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다. “아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??” 인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했습니다.</p>
+                                                </a>
+                                                <div class="detail_info">
+                                                    <a href="[##_article_rep_category_link_##]" class="link_cate">카테고리 종류</a>
+                                                    <span class="txt_bar"></span> 2016-10-10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entry">
+                                    <div class="list_wrap">
+                                        <div class="blog-info">
+                                            <div class="container">
+                                                <div class="blogImage">
+                                                    <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" alt="" />
+                                                </div>
+                                                <h1><a href="http://localhost:9100">블로그 제목 입니다.</a></h1>
+                                                <!-- 블로그 정보 -->
+                                                <div class="blogDesc truncate">안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다. </div>
+                                                <div class="userID">길동이</div>
+                                            </div>
+                                        </div>
+                                        <div class="list_content clearfix">
+                                            <s_article_rep_thumbnail>
+                                                <div class="thumbnail_post">
+                                                    <a href="[##_article_rep_link_##]">
+                                                        <!--<img src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">-->
+                                                        <img class="img-responsive" src="http://i.imgur.com/3cVc1Vg.jpg">
+                                                    </a>
+                                                </div>
+                                            </s_article_rep_thumbnail>
+                                            <div class="desc-info">
+                                                <a href="[##_article_rep_link_##]" class="link_post">
+                                                    <h2 class="tit_post">블로그 글의 제목</h2>
+                                                    <p class="txt_post">날씨.. 외출하기 딱좋은 맑음.. 5월5일과 샌드위치되어 있는 5월4일.. 중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다. 무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다. “아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??” 인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했습니다.</p>
+                                                </a>
+                                                <div class="detail_info">
+                                                    <a href="[##_article_rep_category_link_##]" class="link_cate">카테고리 종류</a>
+                                                    <span class="txt_bar"></span> 2016-10-10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entry">
+                                    <div class="list_wrap">
+                                        <div class="blog-info">
+                                            <div class="container">
+                                                <div class="blogImage">
+                                                    <img class="img-responsive" src="https://pixabay.com/static/uploads/photo/2016/03/16/00/52/koala-1259681_960_720.jpg" alt="" />
+                                                </div>
+                                                <h1><a href="http://localhost:9100">블로그 제목 입니다.</a></h1>
+                                                <!-- 블로그 정보 -->
+                                                <div class="blogDesc truncate">안녕하세요. 홍길동 입니다. 이렇게 반가울수가 없네요. 사랑합니다. </div>
+                                                <div class="userID">길동이</div>
+                                            </div>
+                                        </div>
+                                        <div class="list_content clearfix">
+                                            <s_article_rep_thumbnail>
+                                                <div class="thumbnail_post">
+                                                    <a href="[##_article_rep_link_##]">
+                                                        <!--<img src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">-->
+                                                        <img class="img-responsive" src="http://i.imgur.com/3cVc1Vg.jpg">
+                                                    </a>
+                                                </div>
+                                            </s_article_rep_thumbnail>
+                                            <div class="desc-info">
+                                                <a href="[##_article_rep_link_##]" class="link_post">
+                                                    <h2 class="tit_post">블로그 글의 제목</h2>
+                                                    <p class="txt_post">날씨.. 외출하기 딱좋은 맑음.. 5월5일과 샌드위치되어 있는 5월4일.. 중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다. 무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다. “아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??” 인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했습니다.</p>
+                                                </a>
+                                                <div class="detail_info">
+                                                    <a href="[##_article_rep_category_link_##]" class="link_cate">카테고리 종류</a>
+                                                    <span class="txt_bar"></span> 2016-10-10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /build -->
+                            </s_index_article_rep>
+                            <div id="permalink_article" class="container-fluid entry">
+                                <!-- 글 관련 정보 -->
+                                <s_permalink_article_rep>
+                                    <div class="row">
+                                        <div class="col-sm-7 col-md-8">
+                                            <div class="titleWrap clearfix">
+                                                <span class="label label-info category"><a href="[##_article_rep_category_link_##]">카테고리 종류</a></span>
+                                                <h2><a href="[##_article_rep_link_##]">블로그 글의 제목</a></h2>
+                                                <div class="authorDate">
+                                                    <div class="author">
+                                                        <i class="xi-user-o"></i> : 홍길동</div>
+                                                    <div class="date">
+                                                        <i class="xi-calendar-list"></i> : 2016-10-10</div>
+                                                </div>
+                                                <s_tag_label>
+                                                    <div class="tagTrail">
+                                                        <!-- 글 관련 태그 -->
+                                                        <span class="tagText">
+                                                            <i class="xi-tag"></i>
+                                                        </span> <a href='#'>태그1</a>, <a href='#'>IT</a>, <a href='#'>시장</a>, <a href='#'>컴퓨터</a>
+                                                    </div>
+                                                </s_tag_label>
+                                                <s_ad_div>
+                                                    <div class="admin">
+                                                        <a href="[##_s_ad_m_link_##]">수정</a> :
+                                                        <a href="#" onclick="[##_s_ad_m_onclick_##]">수정(창으로)</a> | (공개)→
+                                                        <a href="#" onclick="[##_s_ad_s2_onclick_##]">비공개</a> |
+                                                        <a href="#" onclick="[##_s_ad_t_onclick_##]">관련글(트랙백)</a> |
+                                                        <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+                                                    </div>
+                                                </s_ad_div>
+                                            </div>
+                                            <div class="article">
+                                                <!-- 블로그 본문 내용 -->
+                                                <div>
+                                                    <div class="tt_article_useless_p_margin">
+                                                        <p>날씨.. 외출하기 딱좋은 맑음..</p>
+                                                        <p>5월5일과 샌드위치되어 있는 5월4일..
+                                                            <br>중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다.
+                                                            <br>무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다.
+                                                            <br>“아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??”
+                                                            <br>인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했고 관광 하는 내내 마음이 졸려서…죽는줄 알았다. 더군다나 <code>교통단속차량</code>이 돌아다니는것을 봤을때는 정말….(다행이 딱지는 떼이지 않은것 같다) </p>
+                                                        <img src="http://i.imgur.com/1x7dsAX.jpg">
+                                                        <br>인천중구청의 모습이다. 주차장이 있으나 토요일이나 휴일은 거의 만차라고 보면 될것 같다
+                                                        <br>그런날에는 주차단속차량을 돌리질 말든가.. 심장쫄려 죽는줄 알았다. </p>
+                                                        <blockquote>
+                                                            <p>감천(甘川)의 옛 이름은 감내(甘內)입니다.
+                                                                <br>감(甘)은 「검」에서 온 것이며, 「검」은 신(神)이란 뜻입니다. 천(川)은 「내」를 한자로 적은 것입니다. 다른 유래로는 물이 좋아서 감천이라고 했다고 합니다. 그 이전에는 「內」를 적어 감내(甘內) 또는 감래(甘來)라 하였고, 다내리(多內里: 多大안쪽마을)로 부르기도 하였습니다. </p>
+                                                            <p>반달고개는 감천동과 아미동을 연결하는 교통로로서 왕래가 잦았던 고개로 감천2동에서 서구 아미동으로 넘어갈 수 있으며 천마산과 아미산 사이에 위치하고 있습니다.
+                                                                <br>태극도는 1918년에 조철제(趙哲濟)가 증산사상에 기초하여 세운 종교로써 사천여명의 태극도 신도들이 이 반달고개 주변에 모여 집단촌을 만들었는데, 이 태극도 신앙촌이 중심이 되어 1958년 현재의 감천2동이 만들어졌습니다.</p>
+                                                        </blockquote>
+                                                        <br>
+                                                        <img src="http://i.imgur.com/Nc2iVcv.jpg">
+                                                        <br> 인천중구청 바로 앞에 있는 고양이 인형이다. 어설프지만 이국적인 냄새가 물씬난다. </p>
+                                                        <br>올라가기 힘들것같아 애들만 꼬셔서 올려보냈다. </p>
+                                                        <div class="markdown-here-wrapper" data-md-url="http://uxgjs.tistory.com/admin/entry/post/?id=2">
+                                                            <h1 id="-">프로그램 설치</h1>
+                                                            <p> 티스토리 스킨은 티스토리에서 제공하는 스킨을 적용하는 방법도 있지만 다른 사람이 배포하는 스킨을 적용 할 수도 있습니다.
+                                                                <br>저희가 배포하는 스킨도 쉽게 적용할 수 있으며 공통적으로 아래의 방법으로 등록하시면 됩니다.
+                                                            </p>
+                                                            <p>먼저 제공자의 스킨을 다운로드 합니다. 대게 압축파일로 되어 있으니 압축을 해제하고 시작하시면 됩니다.
+                                                                <br>저희가 제공하는 스킨은 아래에서 다운로드 받을 수 있습니다.</p>
+                                                            <p><a href="http://uxgjs.tistory.com" target="_blank">UX공작소의 티스토리 스킨 바로가기</a></p>
+                                                            <h2 id="-">설치</h2>
+                                                            <h3 id="-">스킨등록</h3>
+                                                            <p>먼저 스킨을 적용하기 위해서는 티스토리 사이트에서 먼저 스킨을 등록해야 합니다.</p>
+                                                            <ol>
+                                                                <li><code>스킨메뉴</code>를 선택합니다.</li>
+                                                                <li><code>스킨등록</code> 버튼을 선택합니다.</li>
+                                                            </ol>
+                                                            <p>
+                                                                <img src="http://i.imgur.com/N4sukSe.jpg" alt="img">
+                                                            </p>
+                                                            <h4 id="-">새 스킨등록</h4>
+                                                            <pre><code class="javascript">
+                function $initHighlight(block, cls) {
+                    try {
+                        if (cls.search(/\bno\-highlight\b/) != -1)
+                        return process(block, true, 0x0F) +
+                                ` class="${cls}"`;
+                    } catch (e) {
+                        /* handle exception */
+                    }
+                    for (var i = 0 / 2; i < classes.length; i++) {
+                        if (checkCondition(classes[i]) === undefined)
+                        console.log('undefined');
+                    }
+                }
+        </code></pre>
+                                                            <h4 id="-">모바일웹 스킨 사용 해제</h4>
+                                                            <p>모바일웹 스킨은 웹 스킨처럼 모바일화면에서만 적용되는 스킨으로 별도의 스킨으로 적용되는 기능입니다.
+                                                                <br>저희가 배포하는 스킨은 반응형 스킨으로 모바일에서도 최적화 되어 보여지기 때문에 모바일웹 스킨은 필요가 없습니다.
+                                                                <br>만약에 모바일웹 스킨을 사용할 경우는 모바일화면에서는 저희가 배포하는 스킨이 보여지지 않습니다.</p>
+                                                            <ol>
+                                                                <li>메뉴증 <code>모바일웹 스킨</code> 메뉴를 선택합니다.</li>
+                                                                <li>모바일웹 스킨의 사용을 <code>OFF</code>로 설정합니다.
+                                                                    <br>
+                                                                    <img src="http://i.imgur.com/W7WSOtP.jpg" alt="img">
+                                                                </li>
+                                                            </ol>
+                                                            <h4 id="uxgjs-">UXGJS 스킨 변수 설정</h4>
+                                                            <p>저희가 배포하는 스킨은 사용자가 일부 스킨을 설정할 수 있는 설정파일을 첨부합니다.
+                                                                <br>배포하는 스킨별로 내용이 약간씩 다르므로 배포버전별로 설명을 첨부할 예정입니다.
+                                                                <br>파일명은 <code>skin_cfg.js</code>으로 제공예정입니다.
+                                                            </p>
+                                                            <p><a href="http://uxgjs.tistory.com" target="_blank">UX공작소의 티스토리 스킨 바로가기</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sns-send mv20 text-center">
+                                                <span>퍼가기</span>
+                                                <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='
+                +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog',
+                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook" class="facebook">
+                                                    <i class="xi-facebook xi-x"></i>
+                                                </a>
+                                                <a href="#" onclick="javascript:window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20'
+                +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog',
+                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Twitter" class="twitter">
+                                                    <i class="xi-twitter xi-x"></i>
+                                                </a>
+                                                <a href="#" onclick="javascript:window.open('https://plus.google.com/share?url='+encodeURIComponent(document.URL), 'googleplussharedialog','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=600');return false;" target="_blank" alt="Share on Google+" class="google">
+                                                    <i class="xi-google-plus xi-x"></i>
+                                                </a>
+                                                <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url='+encodeURIComponent(document.URL),'kakaostorysharedialog','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;" target="_blank" alt="Share on kakaostory" class="kakaostory">
+                                                    <i class="xi-kakaostory xi-x"></i>
+                                                </a>
+                                                <a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url='
+                +encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title),
+                'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Naver" class="naver">
+                                                    <i class="xi-naver xi-x"></i>
+                                                </a>
+                                            </div>
+                                            <s_article_related>
+                                                <div class="area_related">
+                                                    <strong class="tit_related">'카테고리 종류' Related Articles</strong>
+                                                    <a href="[##_article_rep_category_link_##]" class="link_more">more</a>
+                                                    <ul class="list_related">
+                                                        <s_article_related_rep>
+                                                            <li class="thumb_type">
+                                                                <a href="[##_article_related_rep_link_##]" class="link_related">
+                                                                    <s_article_related_rep_thumbnail>
+                                                                        <span class="thumb_related">
+                                                                            <img src="//i1.daumcdn.net/thumb/C185x200/?fname=http://cfile28.uf.tistory.com/image/234F1446575EBB342DE87B" class="img_related" alt="">
+                                                                            <!--<img src="http://cfile28.uf.tistory.com/image/234F1446575EBB342DE87B" class="img_related" alt="">-->
+                                                                        </span>
+                                                                    </s_article_related_rep_thumbnail>
+                                                                    <span class="txt_related">첫번째 티스토리 스킨 2016 기본 배포</span>
+                                                                    <span class="date_related">2016.05.26</span>
+                                                                    <span class="frame_related"></span>
+                                                                </a>
+                                                            </li>
+                                                        </s_article_related_rep>
+                                                        <!-- build:remove -->
+                                                        <li class="text_type">
+                                                            <a href="/5" class="link_related">
+                                                                <span class="txt_related">유료스킨 구매</span>
+                                                                <span class="date_related">2016.07.11</span>
+                                                                <span class="frame_related"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="thumb_type">
+                                                            <a href="/3" class="link_related">
+                                                                <span class="thumb_related">
+                                                                    <img src="//i1.daumcdn.net/thumb/C185x200/?fname=http://cfile28.uf.tistory.com/image/234F1446575EBB342DE87B" class="img_related" alt="">
+                                                                    <!--<img src="http://cfile28.uf.tistory.com/image/234F1446575EBB342DE87B" class="img_related" alt="">-->
+                                                                </span>
+                                                                <span class="txt_related">첫번째 티스토리 스킨 2016 기본 배포 [BETA]</span>
+                                                                <span class="date_related">2016.05.26</span>
+                                                                <span class="frame_related"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="text_type">
+                                                            <a href="/2" class="link_related">
+                                                                <span class="txt_related">티스토리의 skin 설치 및 설정</span>
+                                                                <span class="date_related">2016.05.25</span>
+                                                                <span class="frame_related"></span>
+                                                            </a>
+                                                        </li>
+                                                        <!-- /build -->
+                                                    </ul>
+                                                </div>
+                                            </s_article_related>
+                                        </div>
+                                        <div class="col-sm-5 col-md-4 sidebar">
+                                            <div class="area_rp">
+                                                <s_rp>
+                                                    <div id="commentList" class="comment">
+                                                        <s_rp_container>
+                                                            <s_rp_rep>
+                                                                <div id='[##_rp_rep_id_##]' class="rp_list [##_rp_rep_class_##] custom-panel-main">
+                                                                    <div class="info">
+                                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                    </div>
+                                                                    <div class="s_rp_rep hoverable ">
+                                                                        <p class="txt_date">2016/01/22 22:10</p>
+                                                                        <p class="tit_nickname">홍길동
+                                                                            <span class="ico_skin ico_secret"></span>
+                                                                        </p>
+                                                                        <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                        <div class="my_edit">
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="btn btn-default btn-xs">
+                                                                                <i class="xi-message"></i> 댓글쓰기</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <s_rp2_container>
+                                                                    <s_rp2_rep>
+                                                                        <div id='[##_rp_rep_id_##]' class="rp_list re_reply [##_rp_rep_class_##]">
+                                                                            <div class="info">
+                                                                                <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                            </div>
+                                                                            <div class="s_rp2_rep hoverable">
+                                                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                                                <p class="tit_nickname">홍길동
+                                                                                    <span class="ico_skin ico_secret"></span>
+                                                                                </p>
+                                                                                <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                                <div class="my_edit">
+                                                                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </s_rp2_rep>
+                                                                </s_rp2_container>
+                                                                <!-- build:remove -->
+                                                                <div id='[##_rp_rep_id_##]' class="rp_list [##_rp_rep_class_##] custom-panel-main">
+                                                                    <div class="info">
+                                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                    </div>
+                                                                    <div class="s_rp_rep hoverable ">
+                                                                        <p class="txt_date">2016/01/22 22:10</p>
+                                                                        <p class="tit_nickname">홍길동
+                                                                            <span class="ico_skin ico_secret"></span>
+                                                                        </p>
+                                                                        <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                        <div class="my_edit">
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="btn btn-default btn-xs">
+                                                                                <i class="xi-message"></i> 댓글쓰기</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <s_rp2_container>
+                                                                    <s_rp2_rep>
+                                                                        <div id='[##_rp_rep_id_##]' class="rp_list re_reply [##_rp_rep_class_##]">
+                                                                            <div class="info">
+                                                                                <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                            </div>
+                                                                            <div class="s_rp2_rep hoverable">
+                                                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                                                <p class="tit_nickname">홍길동
+                                                                                    <span class="ico_skin ico_secret"></span>
+                                                                                </p>
+                                                                                <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                                <div class="my_edit">
+                                                                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </s_rp2_rep>
+                                                                </s_rp2_container>
+                                                                <div id='[##_rp_rep_id_##]' class="rp_list [##_rp_rep_class_##] custom-panel-main">
+                                                                    <div class="info">
+                                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                    </div>
+                                                                    <div class="s_rp_rep hoverable ">
+                                                                        <p class="txt_date">2016/01/22 22:10</p>
+                                                                        <p class="tit_nickname">홍길동
+                                                                            <span class="ico_skin ico_secret"></span>
+                                                                        </p>
+                                                                        <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                        <div class="my_edit">
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                            <a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="btn btn-default btn-xs">
+                                                                                <i class="xi-message"></i> 댓글쓰기</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <s_rp2_container>
+                                                                    <s_rp2_rep>
+                                                                        <div id='[##_rp_rep_id_##]' class="rp_list re_reply [##_rp_rep_class_##]">
+                                                                            <div class="info">
+                                                                                <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                                            </div>
+                                                                            <div class="s_rp2_rep hoverable">
+                                                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                                                <p class="tit_nickname">홍길동
+                                                                                    <span class="ico_skin ico_secret"></span>
+                                                                                </p>
+                                                                                <p class="txt_reply">##구매##사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                                                <div class="my_edit">
+                                                                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </s_rp2_rep>
+                                                                </s_rp2_container>
+                                                                <!-- /build -->
+                                                            </s_rp_rep>
+                                                        </s_rp_container>
+                                                    </div>
+                                                    <div class="col-sm-5 col-md-4 rpForm">
+                                                        <div class="rp_cnt">댓글 |
+                                                            <small> 구분은 말머리에 해시태그로 사용됩니다.</small>
+                                                        </div>
+                                                        <s_rp_input_form>
+                                                            <div class="row">
+                                                                <div class="col-md-12 kind"></div>
+                                                                <s_rp_member>
+                                                                    <s_rp_guest>
+                                                                        <div class="col-xs-6  col-sm-6 col-md-4 mt10">
+                                                                            <label class="sr-only" for="[##_rp_input_name_##]">아이디</label>
+                                                                            <input type="text" name="[##_rp_input_name_##]" id="[##_rp_input_name_##]" class="form-control input-sm" placeholder="아이디">
+                                                                        </div>
+                                                                        <div class="col-xs-6  col-sm-6 col-md-5 mt10">
+                                                                            <label class="sr-only" for="[##_rp_input_password_##]">비밀번호</label>
+                                                                            <input type="password" name="[##_rp_input_password_##]" id="[##_rp_input_password_##]" class="form-control input-sm" placeholder="비밀번호 입력">
+                                                                        </div>
+                                                                    </s_rp_guest>
+                                                                    <div class="col-xs-12 col-sm-12 col-md-3 mt10 cb">
+                                                                        <input type="checkbox" name="[##_rp_input_is_secret_##]" id="[##_rp_input_is_secret_##]" />
+                                                                        <label for="[##_rp_input_is_secret_##]">비밀글</label>
+                                                                    </div>
+                                                                </s_rp_member>
+                                                                <div class="col-xs-12 mt5">
+                                                                    <div class="input-group rpWrite">
+                                                                        <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]" class="form-control rp_textarea" rows="2" placeholder="여러분의 소중한 댓글을 입력해주세요"></textarea>
+                                                                        <span class="input-group-btn">
+                                                                            <button type="submit" class="btn btn-main" onclick="[##_rp_onclick_submit_##]">쓰기
+                                                                                <i class="xi-send"></i>
+                                                                            </button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </s_rp_input_form>
+                                                    </div>
+                                                </s_rp>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </s_permalink_article_rep>
+                            </div>
+                        </s_article_rep>
+                    </div>
+                    <s_guest>
+                        <div id="guestbook" class="guestbook">
+                            <h3 class="titleWrap">방명록</h3>
+                            <s_guest_input_form>
+                                <div class="guestWrite panel panel-default">
+                                    <div class="panel-body">
+                                        <s_rp_input_form>
+                                            <textarea id="[##_guest_textarea_body_##]" name="[##_guest_textarea_body_##]" class="form-control" rows="5" placeholder="여러분의 소중한 안부글을 입력해주세요"></textarea>
+                                            <div class="row">
+                                                <s_guest_member>
+                                                    <s_guest_form>
+                                                        <div class="col-xs-6 col-sm-3 col-md-3 mt10">
+                                                            <label class="sr-only" for="[##_guest_input_name_##]">아이디</label>
+                                                            <input type="text" name="[##_guest_input_name_##]" id="[##_guest_input_name_##]" class="form-control" placeholder="아이디">
+                                                        </div>
+                                                        <div class="col-xs-6 col-sm-4 col-md-3 mt10">
+                                                            <label class="sr-only" for="[##_guest_input_password_##]">비밀번호</label>
+                                                            <input type="password" name="[##_guest_input_password_##]" id="[##_guest_input_password_##]" class="form-control" placeholder="비밀번호 입력">
+                                                        </div>
+                                                        <div class="col-xs-6 col-sm-4 col-md-3 mt10">
+                                                            <label class="sr-only" for="[##_guest_input_homepage_##]">홈페이지</label>
+                                                            <input type="url" name="[##_guest_input_homepage_##]" id="[##_guest_input_homepage_##]" class="form-control" placeholder="홈페이지 입력">
+                                                        </div>
+                                                    </s_guest_form>
+                                                    <div class="col-xs-6 col-sm-6 col-md-2 mt10">
+                                                        <div class="cb">
+                                                            <input type="checkbox" name="[##_guest_input_is_secret_##]" id="[##_guest_input_is_secret_##]" />
+                                                            <label for="[##_guest_input_is_secret_##]">비밀글</label>
+                                                        </div>
+                                                    </div>
+                                                </s_guest_member>
+                                                <div class="col-xs-12 col-sm-6 col-md-2 mt10">
+                                                    <button type="submit" class="btn btn-main btn-block" onclick="[##_guest_onclick_submit_##]">
+                                                        <i class="xi-message"></i> 안부 남기기</button>
+                                                </div>
+                                            </div>
+                                        </s_rp_input_form>
+                                    </div>
+                                </div>
+                            </s_guest_input_form>
+                            <s_guest_container>
+                                <s_guest_rep>
+                                    <div id='[##_guest_rep_id_##]' class="panel panel-default guest-list [##_guest_rep_class_##]">
+                                        <div class="panel-body list_reply">
+                                            <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                            <div class="reply_content">
+                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                <p class="tit_nickname">홍길동
+                                                    <span class="ico_skin ico_secret"></span>
+                                                </p>
+                                                <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                <div class="my_edit">
+                                                    <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                    <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="btn btn-main btn-xs">
+                                                        <i class="xi-message"></i> 댓글쓰기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <s_guest_reply_container>
+                                            <ul class="list-group list_reply">
+                                                <s_guest_reply_rep>
+                                                    <li id='[##_guest_rep_id_##]' class="re_reply list-group-item [##_guest_rep_class_##]">
+                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                        <div class="reply_content">
+                                                            <p class="txt_date">2016/01/22 22:10</p>
+                                                            <p class="tit_nickname">홍길동
+                                                                <span class="ico_skin ico_secret"></span>
+                                                            </p>
+                                                            <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                            <div class="my_edit">
+                                                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                    <i class="xi-eraser"></i> 수정/삭제</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </s_guest_reply_rep>
+                                            </ul>
+                                        </s_guest_reply_container>
+                                    </div>
+                                    <!-- build:remove -->
+                                    <div id='[##_guest_rep_id_##]' class="panel panel-default guest-list [##_guest_rep_class_##]">
+                                        <div class="panel-body list_reply">
+                                            <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                            <div class="reply_content">
+                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                <p class="tit_nickname">홍길동
+                                                    <span class="ico_skin ico_secret"></span>
+                                                </p>
+                                                <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                <div class="my_edit">
+                                                    <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                    <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="btn btn-main btn-xs">
+                                                        <i class="xi-message"></i> 댓글쓰기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <s_guest_reply_container>
+                                            <ul class="list-group list_reply">
+                                                <s_guest_reply_rep>
+                                                    <li id='[##_guest_rep_id_##]' class="re_reply list-group-item [##_guest_rep_class_##]">
+                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                        <div class="reply_content">
+                                                            <p class="txt_date">2016/01/22 22:10</p>
+                                                            <p class="tit_nickname">홍길동
+                                                                <span class="ico_skin ico_secret"></span>
+                                                            </p>
+                                                            <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                            <div class="my_edit">
+                                                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                    <i class="xi-eraser"></i> 수정/삭제</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </s_guest_reply_rep>
+                                            </ul>
+                                        </s_guest_reply_container>
+                                    </div>
+                                    <div id='[##_guest_rep_id_##]' class="panel panel-default guest-list [##_guest_rep_class_##]">
+                                        <div class="panel-body list_reply">
+                                            <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                            <div class="reply_content">
+                                                <p class="txt_date">2016/01/22 22:10</p>
+                                                <p class="tit_nickname">홍길동
+                                                    <span class="ico_skin ico_secret"></span>
+                                                </p>
+                                                <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                <div class="my_edit">
+                                                    <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                        <i class="xi-eraser"></i> 수정/삭제</a>
+                                                    <a href="#" onclick="[##_guest_rep_onclick_reply_##]" class="btn btn-main btn-xs">
+                                                        <i class="xi-message"></i> 댓글쓰기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <s_guest_reply_container>
+                                            <ul class="list-group list_reply">
+                                                <s_guest_reply_rep>
+                                                    <li id='[##_guest_rep_id_##]' class="re_reply list-group-item [##_guest_rep_class_##]">
+                                                        <img src="http://i1.daumcdn.net/cfs.tistory/static/skin/avatar_default.gif" width="50" height="50" class="img_profile" alt="프로필사진">
+                                                        <div class="reply_content">
+                                                            <p class="txt_date">2016/01/22 22:10</p>
+                                                            <p class="tit_nickname">홍길동
+                                                                <span class="ico_skin ico_secret"></span>
+                                                            </p>
+                                                            <p class="txt_reply">사업파트너, 사회 등 다양한 이해관계자에 대한 가치를 창출하고 있습니다 임직원의 불공정한 업무수행, 부당한 요구, 금품, 향응, 편의의 수수, 회계관련 부당한 업무처리, 기타 부정/비리행위 등에 상담과 제보를 받고 있습니다.</p>
+                                                            <div class="my_edit">
+                                                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]" class="btn btn-link btn-xs">
+                                                                    <i class="xi-eraser"></i> 수정/삭제</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </s_guest_reply_rep>
+                                            </ul>
+                                        </s_guest_reply_container>
+                                    </div>
+                                    <!-- /build -->
+                                </s_guest_rep>
+                            </s_guest_container>
+                        </div>
+                    </s_guest>
+                    <s_notice_rep>
+                        <div id="entryNotice" class="entryNotice">
+                            <div class="titleWrap">
+                                <h2>
+                                    <span class="notice">
+                                        <i class="xi-announce"></i> 공지사항</span> <a href="[##_notice_rep_link_##]">이렇게이렇게 하면 됩니다.</a>
+                                </h2>
+                                <div class="cate">
+                                    <div class="author">Author : 홍길동</div>
+                                    <div class="date">Date : 2016/01/22 22:10</div>
+                                </div>
+                            </div>
+                            <div class="article">
+                                <div>
+                                    <div class="tt_article_useless_p_margin">
+                                        <p>날씨.. 외출하기 딱좋은 맑음..</p>
+                                        <p>5월5일과 샌드위치되어 있는 5월4일..
+                                            <br>중학생인 큰놈은 컸다고 집에 있겠다고 하는것을 겨우 끌고 나와 인천 차이나타운으로 향했다.
+                                            <br>무려 1시간 30분을 달려 도착을 했는데… 괜히 왔다라는 생각이 들 정도로 주차난이 심각했다.
+                                            <br>“아니.. 휴일도 아니고 월요일인데.. 차들이 이렇게나 많나??”
+                                            <br>인터넷으로 폭풍검색을 해서 겨우 인천 중구청주차장으로 갔으나 역시 거기도 만차.. 바로 옆 길로 꺽어서 골목길에 주차를 했고 관광 하는 내내 마음이 졸려서…죽는줄 알았다. 더군다나 <code>교통단속차량</code>이 돌아다니는것을 봤을때는 정말….(다행이 딱지는 떼이지 않은것 같다) </p>
+                                        <img src="http://i.imgur.com/1x7dsAX.jpg">
+                                        <br>인천중구청의 모습이다. 주차장이 있으나 토요일이나 휴일은 거의 만차라고 보면 될것 같다
+                                        <br>그런날에는 주차단속차량을 돌리질 말든가.. 심장쫄려 죽는줄 알았다. </p>
+                                        <blockquote>
+                                            <p>감천(甘川)의 옛 이름은 감내(甘內)입니다.
+                                                <br>감(甘)은 「검」에서 온 것이며, 「검」은 신(神)이란 뜻입니다. 천(川)은 「내」를 한자로 적은 것입니다. 다른 유래로는 물이 좋아서 감천이라고 했다고 합니다. 그 이전에는 「內」를 적어 감내(甘內) 또는 감래(甘來)라 하였고, 다내리(多內里: 多大안쪽마을)로 부르기도 하였습니다. </p>
+                                            <p>반달고개는 감천동과 아미동을 연결하는 교통로로서 왕래가 잦았던 고개로 감천2동에서 서구 아미동으로 넘어갈 수 있으며 천마산과 아미산 사이에 위치하고 있습니다.
+                                                <br>태극도는 1918년에 조철제(趙哲濟)가 증산사상에 기초하여 세운 종교로써 사천여명의 태극도 신도들이 이 반달고개 주변에 모여 집단촌을 만들었는데, 이 태극도 신앙촌이 중심이 되어 1958년 현재의 감천2동이 만들어졌습니다.</p>
+                                        </blockquote>
+                                        <br>
+                                        <img src="http://i.imgur.com/Nc2iVcv.jpg">
+                                        <br> 인천중구청 바로 앞에 있는 고양이 인형이다. 어설프지만 이국적인 냄새가 물씬난다. </p>
+                                        <br>올라가기 힘들것같아 애들만 꼬셔서 올려보냈다. </p>
+                                        <div class="markdown-here-wrapper" data-md-url="http://uxgjs.tistory.com/admin/entry/post/?id=2">
+                                            <h1 id="-">프로그램 설치</h1>
+                                            <p> 티스토리 스킨은 티스토리에서 제공하는 스킨을 적용하는 방법도 있지만 다른 사람이 배포하는 스킨을 적용 할 수도 있습니다.
+                                                <br>저희가 배포하는 스킨도 쉽게 적용할 수 있으며 공통적으로 아래의 방법으로 등록하시면 됩니다.
+                                            </p>
+                                            <p>먼저 제공자의 스킨을 다운로드 합니다. 대게 압축파일로 되어 있으니 압축을 해제하고 시작하시면 됩니다.
+                                                <br>저희가 제공하는 스킨은 아래에서 다운로드 받을 수 있습니다.</p>
+                                            <p><a href="http://uxgjs.tistory.com" target="_blank">UX공작소의 티스토리 스킨 바로가기</a></p>
+                                            <h2 id="-">설치</h2>
+                                            <h3 id="-">스킨등록</h3>
+                                            <p>먼저 스킨을 적용하기 위해서는 티스토리 사이트에서 먼저 스킨을 등록해야 합니다.</p>
+                                            <ol>
+                                                <li><code>스킨메뉴</code>를 선택합니다.</li>
+                                                <li><code>스킨등록</code> 버튼을 선택합니다.</li>
+                                            </ol>
+                                            <p>
+                                                <img src="http://i.imgur.com/N4sukSe.jpg" alt="img">
+                                            </p>
+                                            <h4 id="-">새 스킨등록</h4>
+                                            <pre><code class="javascript">
+                function $initHighlight(block, cls) {
+                    try {
+                        if (cls.search(/\bno\-highlight\b/) != -1)
+                        return process(block, true, 0x0F) +
+                                ` class="${cls}"`;
+                    } catch (e) {
+                        /* handle exception */
+                    }
+                    for (var i = 0 / 2; i < classes.length; i++) {
+                        if (checkCondition(classes[i]) === undefined)
+                        console.log('undefined');
+                    }
+                }
+        </code></pre>
+                                            <h4 id="-">모바일웹 스킨 사용 해제</h4>
+                                            <p>모바일웹 스킨은 웹 스킨처럼 모바일화면에서만 적용되는 스킨으로 별도의 스킨으로 적용되는 기능입니다.
+                                                <br>저희가 배포하는 스킨은 반응형 스킨으로 모바일에서도 최적화 되어 보여지기 때문에 모바일웹 스킨은 필요가 없습니다.
+                                                <br>만약에 모바일웹 스킨을 사용할 경우는 모바일화면에서는 저희가 배포하는 스킨이 보여지지 않습니다.</p>
+                                            <ol>
+                                                <li>메뉴증 <code>모바일웹 스킨</code> 메뉴를 선택합니다.</li>
+                                                <li>모바일웹 스킨의 사용을 <code>OFF</code>로 설정합니다.
+                                                    <br>
+                                                    <img src="http://i.imgur.com/W7WSOtP.jpg" alt="img">
+                                                </li>
+                                            </ol>
+                                            <h4 id="uxgjs-">UXGJS 스킨 변수 설정</h4>
+                                            <p>저희가 배포하는 스킨은 사용자가 일부 스킨을 설정할 수 있는 설정파일을 첨부합니다.
+                                                <br>배포하는 스킨별로 내용이 약간씩 다르므로 배포버전별로 설명을 첨부할 예정입니다.
+                                                <br>파일명은 <code>skin_cfg.js</code>으로 제공예정입니다.
+                                            </p>
+                                            <p><a href="http://uxgjs.tistory.com" target="_blank">UX공작소의 티스토리 스킨 바로가기</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </s_notice_rep>
+                    <s_article_protected>
+                        <div id="entryProtected" class="entryProtected">
+                            <h2>
+                                <a href="[##_article_rep_link_##]">블로그 글의 제목</a>
+                                <span class="date">2016-10-10</span>
+                            </h2>
+                            <div class="row mt30">
+                                <div class="col s6  offset-s3">
+                                    <i class="xi-lock xi-5x mr20"></i>
+                                    <p>보호되어 있는 글입니다.</p>
+                                    <p class="pt10"> 내용을 보시려면 비밀번호를 입력하세요.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s5 offset-s3">
+                                    <input id="[##_article_password_##]" type="password" class="validate" maxlength="16" name="[##_article_password_##]" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]">
+                                    <label for="[##_article_password_##]">Password</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <button class="btn waves-effect waves-light" type="submit" onclick="[##_article_dissolve_##]">확 인
+                                        <i class="xi-paper-plane left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </s_article_protected>
+                    <s_local>
+                        <div id="localog" class="localog">
+                            <h3>위치로그</h3>
+                            <s_local_spot_rep>
+                                <div class="spot d왼쪽부터의 깊이">
+                                    [##_local_spot_##]
+                                </div>
+                            </s_local_spot_rep>
+                            <s_local_info_rep>
+                                <div class="info d왼쪽으로부터의 깊이">
+                                    <a href="글의 고유 주소">글의 제목</a>
+                                </div>
+                            </s_local_info_rep>
+                            <!-- build:remove -->
+                            <div class="spot d0">
+                                강원도
+                            </div>
+                            <div class="spot d20">
+                                원주시
+                            </div>
+                            <div class="spot d40">
+                                판부면
+                            </div>
+                            <div class="info d80">
+                                <a href="/32">치악산자연휴양림 | 치악산 국립공원 자연휴양림</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/32" target="_blank" onmouseover="viewMap(event, this, '3202037^728587^1043737^강원도 원주시 판부면 | 치악산자연휴양림^61831^1^Y^10829148'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="spot d20">
+                                정선군
+                            </div>
+                            <div class="spot d40">
+                                여량면
+                            </div>
+                            <div class="spot d60">
+                                여량동
+                            </div>
+                            <div class="info d80">
+                                <a href="/34">구절리역 | 정선 레일바이크를 타보세요</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/34" target="_blank" onmouseover="viewMap(event, this, '3235037^881364^1118625^강원도 정선군 여량면 | 구절리역^52324^1^Y^8192533'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="spot d40">
+                                임계면
+                            </div>
+                            <div class="info d80">
+                                <a href="/68">백두대간약초나라 | 강원도 가족여행 “백두대간 약초마을”</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/68" target="_blank" onmouseover="viewMap(event, this, '3235035^921753^1115390^강원도 정선군 임계면 | 백두대간약초나라^61821^1^Y^7885908'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="spot d40">
+                                정선읍
+                            </div>
+                            <div class="info d80">
+                                <a href="/71"> | 강원도 가족여행 “정선 아라리촌”</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/71" target="_blank" onmouseover="viewMap(event, this, '3235011^870019^1079005^강원도 정선군 정선읍 | ^61816^1^Y^0'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="info d80">
+                                <a href="/70">병방치스카이워크 | 강원도 가족여행 “병방치 스카이워크”</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/70" target="_blank" onmouseover="viewMap(event, this, '3235011^861970^1075680^강원도 정선군 정선읍 | 병방치스카이워크^52542^1^Y^18845039'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="info d80">
+                                <a href="/69">싸리골식당 | 강원도 가족여행 “정선5일장”</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/69" target="_blank" onmouseover="viewMap(event, this, '3235011^867833^1080375^강원도 정선군 정선읍 | 싸리골식당^61818^1^Y^10599827'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="info d80">
+                                <a href="/79">싸리골식당 | 정선 곤드레나물밥 전문점 싸리골</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/79" target="_blank" onmouseover="viewMap(event, this, '3235011^867338^1080115^강원도 정선군 정선읍 | 싸리골식당^52382^1^Y^10599827'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="info d80">
+                                <a href="/33">정선장터 | 정선장터에 다녀왔습니다</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/33" target="_blank" onmouseover="viewMap(event, this, '3235011^868415^1080600^강원도 정선군 정선읍 | 정선장터^61830^1^Y^8533405'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="spot d20">
+                                춘천시
+                            </div>
+                            <div class="spot d40">
+                                신동면
+                            </div>
+                            <div class="info d80">
+                                <a href="/181">강촌레일파크 김유정역 | 춘천여행의 1순위 강촌레일바이크</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/181" target="_blank" onmouseover="viewMap(event, this, '3201033^656623^1198725^강원도 춘천시 신동면 | 강촌레일파크 김유정역^106801^1^Y^14709335'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="info d80">
+                                <a href="/180">김유정문학촌 | 춘천에 살았던 김유정은 누구인가?</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/180" target="_blank" onmouseover="viewMap(event, this, '3201033^658048^1199685^강원도 춘천시 신동면 | 김유정문학촌^106799^1^Y^19327234'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <div class="spot d20">
+                                횡성군
+                            </div>
+                            <div class="spot d40">
+                                청일면
+                            </div>
+                            <div class="info d80">
+                                <a href="/31">횡성장터 | 횡성장터에 다녀왔습니다.</a>
+                                <a style="margin-left:6px;" href="http://local.daum.net/map/index.jsp?titag=http://jos39.tistory.com/sync/local/31" target="_blank" onmouseover="viewMap(event, this, '3232035^754294^1135321^강원도 횡성군 청일면 | 횡성장터^61832^1^Y^8096497'); return false;">
+                                    <img src="http://i1.daumcdn.net/cfs.tistory/resource/3695/static/admin/icon_map.gif" width="12" height="13" alt="" style="vertical-align: middle;">
+                                </a>
+                            </div>
+                            <!-- /build -->
+                        </div>
+                    </s_local>
+                    <s_tag>
+                        <div id="taglog" class="taglog">
+                            <h3>태그</h3>
+                            <ul class="list-unstyled">
+                                <s_tag_rep>
+                                    <li><a class="cloud1" href="/tag/여행">여행</a></li>
+                                    <li><a class="cloud2" href="/tag/IT">IT</a></li>
+                                    <li><a class="cloud4" href="/tag/맛집">맛집</a></li>
+                                    <li><a class="cloud4" href="/tag/무료프로그램">무료프로그램</a></li>
+                                    <li><a class="cloud4" href="/tag/춘천">춘천</a></li>
+                                    <li><a class="cloud4" href="/tag/CSS">CSS</a></li>
+                                    <li><a class="cloud4" href="/tag/유토렌트">유토렌트</a></li>
+                                    <li><a class="cloud4" href="/tag/남해여행">남해여행</a></li>
+                                    <li><a class="cloud4" href="/tag/가족여행">가족여행</a></li>
+                                    <li><a class="cloud4" href="/tag/국내여행">국내여행</a></li>
+                                    <li><a class="cloud4" href="/tag/부산">부산</a></li>
+                                    <li><a class="cloud4" href="/tag/영화">영화</a></li>
+                                    <li><a class="cloud4" href="/tag/단양">단양</a></li>
+                                    <li><a class="cloud4" href="/tag/일상다반사">일상다반사</a></li>
+                                    <li><a class="cloud4" href="/tag/관광">관광</a></li>
+                                    <li><a class="cloud4" href="/tag/토렌트">토렌트</a></li>
+                                    <li><a class="cloud4" href="/tag/제주도">제주도</a></li>
+                                    <li><a class="cloud4" href="/tag/의정부%20맛집">의정부 맛집</a></li>
+                                    <li><a class="cloud4" href="/tag/남해">남해</a></li>
+                                    <li><a class="cloud4" href="/tag/거제">거제</a></li>
+                                    <li><a class="cloud4" href="/tag/제천">제천</a></li>
+                                    <li><a class="cloud4" href="/tag/웹접근성">웹접근성</a></li>
+                                    <li><a class="cloud4" href="/tag/정선">정선</a></li>
+                                    <li><a class="cloud4" href="/tag/강원도">강원도</a></li>
+                                    <li><a class="cloud4" href="/tag/통영">통영</a></li>
+                                    <li><a class="cloud4" href="/tag/utorrent">utorrent</a></li>
+                                    <li><a class="cloud4" href="/tag/백신">백신</a></li>
+                                    <li><a class="cloud4" href="/tag/티스토리">티스토리</a></li>
+                                    <li><a class="cloud4" href="/tag/HTML">HTML</a></li>
+                                    <li><a class="cloud4" href="/tag/유토랜트">유토랜트</a></li>
+                                    <li><a class="cloud4" href="/tag/비트스눕">비트스눕</a></li>
+                                    <li><a class="cloud4" href="/tag/노트패드++">노트패드++</a></li>
+                                    <li><a class="cloud4" href="/tag/CSS3">CSS3</a></li>
+                                    <li><a class="cloud4" href="/tag/청풍호">청풍호</a></li>
+                                    <li><a class="cloud4" href="/tag/전동성당">전동성당</a></li>
+                                    <li><a class="cloud4" href="/tag/FileZilla">FileZilla</a></li>
+                                    <li><a class="cloud4" href="/tag/파일질라">파일질라</a></li>
+                                    <li><a class="cloud4" href="/tag/less">less</a></li>
+                                    <li><a class="cloud4" href="/tag/블로그운영">블로그운영</a></li>
+                                    <li><a class="cloud4" href="/tag/경기전">경기전</a></li>
+                                    <li><a class="cloud4" href="/tag/웹%20접근성">웹 접근성</a></li>
+                                    <li><a class="cloud4" href="/tag/FTP">FTP</a></li>
+                                    <li><a class="cloud4" href="/tag/경주">경주</a></li>
+                                    <li><a class="cloud4" href="/tag/서브라임텍스트">서브라임텍스트</a></li>
+                                    <li><a class="cloud4" href="/tag/부산씨티투어">부산씨티투어</a></li>
+                                    <li><a class="cloud4" href="/tag/npp">npp</a></li>
+                                    <li><a class="cloud4" href="/tag/프리프로세서">프리프로세서</a></li>
+                                    <li><a class="cloud4" href="/tag/강촌레일바이크">강촌레일바이크</a></li>
+                                    <li><a class="cloud4" href="/tag/웹%20접근성%20품질마크">웹 접근성 품질마크</a></li>
+                                    <li><a class="cloud4" href="/tag/미미식당">미미식당</a></li>
+                                    <li><a class="cloud4" href="/tag/미조식당">미조식당</a></li>
+                                    <li><a class="cloud4" href="/tag/16:8">16:8</a></li>
+                                    <li><a class="cloud4" href="/tag/씨드파일">씨드파일</a></li>
+                                    <li><a class="cloud4" href="/tag/간헐적%20단식">간헐적 단식</a></li>
+                                    <li><a class="cloud4" href="/tag/반응형웹">반응형웹</a></li>
+                                    <li><a class="cloud4" href="/tag/kimsQ">kimsQ</a></li>
+                                    <li><a class="cloud4" href="/tag/백두대간약초나라">백두대간약초나라</a></li>
+                                    <li><a class="cloud4" href="/tag/태그를%20입력해%20주세요.">태그를 입력해 주세요.</a></li>
+                                    <li><a class="cloud4" href="/tag/토렌트파일">토렌트파일</a></li>
+                                    <li><a class="cloud4" href="/tag/bitsnoop">bitsnoop</a></li>
+                                    <li><a class="cloud4" href="/tag/위메프">위메프</a></li>
+                                    <li><a class="cloud4" href="/tag/킴스큐">킴스큐</a></li>
+                                    <li><a class="cloud4" href="/tag/가로정렬">가로정렬</a></li>
+                                    <li><a class="cloud4" href="/tag/씨티투어">씨티투어</a></li>
+                                    <li><a class="cloud4" href="/tag/한국정보화진흥원">한국정보화진흥원</a></li>
+                                    <li><a class="cloud4" href="/tag/전주%20한옥마을">전주 한옥마을</a></li>
+                                    <li><a class="cloud4" href="/tag/기즈모">기즈모</a></li>
+                                    <li><a class="cloud4" href="/tag/싸리골">싸리골</a></li>
+                                    <li><a class="cloud4" href="/tag/금강산랜드">금강산랜드</a></li>
+                                    <li><a class="cloud4" href="/tag/다음뷰">다음뷰</a></li>
+                                    <li><a class="cloud4" href="/tag/jQuery%20Plugin">jQuery Plugin</a></li>
+                                    <li><a class="cloud4" href="/tag/토렌트%20사용법">토렌트 사용법</a></li>
+                                    <li><a class="cloud4" href="/tag/가족여행지추천">가족여행지추천</a></li>
+                                    <li><a class="cloud4" href="/tag/아라리촌">아라리촌</a></li>
+                                    <li><a class="cloud4" href="/tag/HTML5">HTML5</a></li>
+                                    <li><a class="cloud4" href="/tag/전주한옥마을">전주한옥마을</a></li>
+                                    <li><a class="cloud4" href="/tag/토런트">토런트</a></li>
+                                    <li><a class="cloud4" href="/tag/신선대">신선대</a></li>
+                                    <li><a class="cloud4" href="/tag/오뎅식당">오뎅식당</a></li>
+                                    <li><a class="cloud4" href="/tag/ftp서버">ftp서버</a></li>
+                                    <li><a class="cloud4" href="/tag/충주호">충주호</a></li>
+                                    <li><a class="cloud4" href="/tag/알약">알약</a></li>
+                                    <li><a class="cloud4" href="/tag/의정부">의정부</a></li>
+                                    <li><a class="cloud4" href="/tag/경주여행">경주여행</a></li>
+                                    <li><a class="cloud4" href="/tag/김유정역">김유정역</a></li>
+                                    <li><a class="cloud4" href="/tag/레일바이크">레일바이크</a></li>
+                                    <li><a class="cloud4" href="/tag/워터파크">워터파크</a></li>
+                                    <li><a class="cloud4" href="/tag/부대찌개">부대찌개</a></li>
+                                    <li><a class="cloud4" href="/tag/강촌역">강촌역</a></li>
+                                    <li><a class="cloud4" href="/tag/자갈치시장">자갈치시장</a></li>
+                                    <li><a class="cloud4" href="/tag/블로그%20만들기">블로그 만들기</a></li>
+                                    <li><a class="cloud4" href="/tag/강원도여행">강원도여행</a></li>
+                                    <li><a class="cloud4" href="/tag/국립%20중앙박물관">국립 중앙박물관</a></li>
+                                    <li><a class="cloud4" href="/tag/유람선">유람선</a></li>
+                                    <li><a class="cloud4" href="/tag/모노레일">모노레일</a></li>
+                                    <li><a class="cloud4" href="/tag/데몬툴즈">데몬툴즈</a></li>
+                                    <li><a class="cloud4" href="/tag/충북">충북</a></li>
+                                    <li><a class="cloud4" href="/tag/블로그%20운영">블로그 운영</a></li>
+                                    <li><a class="cloud4" href="/tag/외도">외도</a></li>
+                                    <li><a class="cloud4" href="/tag/김유정">김유정</a></li>
+                                    <li><a class="cloud4" href="/tag/무료백신">무료백신</a></li>
+                                    <li><a class="cloud4" href="/tag/비트토렌트">비트토렌트</a></li>
+                                    <li><a class="cloud4" href="/tag/거제도">거제도</a></li>
+                                    <li><a class="cloud4" href="/tag/바람의언덕">바람의언덕</a></li>
+                                    <li><a class="cloud4" href="/tag/단식">단식</a></li>
+                                    <li><a class="cloud4" href="/tag/제주">제주</a></li>
+                                    <li><a class="cloud4" href="/tag/이슈">이슈</a></li>
+                                    <li><a class="cloud4" href="/tag/인천">인천</a></li>
+                                    <li><a class="cloud4" href="/tag/데이트코스">데이트코스</a></li>
+                                    <li><a class="cloud4" href="/tag/강촌">강촌</a></li>
+                                    <li><a class="cloud4" href="/tag/mysql">mysql</a></li>
+                                    <li><a class="cloud4" href="/tag/프리웨어">프리웨어</a></li>
+                                    <li><a class="cloud4" href="/tag/AVAST">AVAST</a></li>
+                                    <li><a class="cloud4" href="/tag/전시">전시</a></li>
+                                    <li><a class="cloud4" href="/tag/V3">V3</a></li>
+                                    <li><a class="cloud4" href="/tag/가을여행">가을여행</a></li>
+                                    <li><a class="cloud4" href="/tag/전주">전주</a></li>
+                                    <li><a class="cloud4" href="/tag/자동차">자동차</a></li>
+                                    <li><a class="cloud4" href="/tag/게시판">게시판</a></li>
+                                    <li><a class="cloud4" href="/tag/개발">개발</a></li>
+                                    <li><a class="cloud4" href="/tag/php">php</a></li>
+                                    <li><a class="cloud4" href="/tag/주민등록번호">주민등록번호</a></li>
+                                    <li><a class="cloud4" href="/tag/휴가">휴가</a></li>
+                                    <li><a class="cloud4" href="/tag/음식">음식</a></li>
+                                    <li><a class="cloud4" href="/tag/바이러스">바이러스</a></li>
+                                    <li><a class="cloud4" href="/tag/구글">구글</a></li>
+                                    <li><a class="cloud4" href="/tag/P2P">P2P</a></li>
+                                    <li><a class="cloud4" href="/tag/Freeware">Freeware</a></li>
+                                    <li><a class="cloud4" href="/tag/Javascript">Javascript</a></li>
+                                    <li><a class="cloud4" href="/tag/블로그">블로그</a></li>
+                                    <li><a class="cloud4" href="/tag/태종대">태종대</a></li>
+                                    <li><a class="cloud4" href="/tag/다이어트">다이어트</a></li>
+                                    <li><a class="cloud5" href="/tag/javascrit">javascrit</a></li>
+                                    <li><a class="cloud5" href="/tag/홍두병">홍두병</a></li>
+                                    <li><a class="cloud5" href="/tag/sublime%20text3">sublime text3</a></li>
+                                    <li><a class="cloud5" href="/tag/해금강테마파크">해금강테마파크</a></li>
+                                    <li><a class="cloud5" href="/tag/sublimetext">sublimetext</a></li>
+                                    <li><a class="cloud5" href="/tag/비프광장">비프광장</a></li>
+                                    <li><a class="cloud5" href="/tag/부산영행">부산영행</a></li>
+                                    <li><a class="cloud5" href="/tag/경주스템프투어">경주스템프투어</a></li>
+                                    <li><a class="cloud5" href="/tag/스템프투어">스템프투어</a></li>
+                                    <li><a class="cloud5" href="/tag/생략부호">생략부호</a></li>
+                                    <li><a class="cloud5" href="/tag/table-cell">table-cell</a></li>
+                                    <li><a class="cloud5" href="/tag/동궁과%20월지">동궁과 월지</a></li>
+                                    <li><a class="cloud5" href="/tag/낙지마실">낙지마실</a></li>
+                                    <li><a class="cloud5" href="/tag/Quick%20Color%20Picker">Quick Color Picker</a></li>
+                                    <li><a class="cloud5" href="/tag/Quick%20Color%20Picker%20+">Quick Color Picker +</a></li>
+                                    <li><a class="cloud5" href="/tag/노들호">노들호</a></li>
+                                    <li><a class="cloud5" href="/tag/구담호">구담호</a></li>
+                                    <li><a class="cloud5" href="/tag/CSS프리프로세서">CSS프리프로세서</a></li>
+                                    <li><a class="cloud5" href="/tag/노드js">노드js</a></li>
+                                    <li><a class="cloud5" href="/tag/.ico">.ico</a></li>
+                                    <li><a class="cloud5" href="/tag/제천%20청풍호%20관광%20모노레일">제천 청풍호 관광 모노레일</a></li>
+                                    <li><a class="cloud5" href="/tag/제천모노레일">제천모노레일</a></li>
+                                    <li><a class="cloud5" href="/tag/청풍모노레일">청풍모노레일</a></li>
+                                    <li><a class="cloud5" href="/tag/databse">databse</a></li>
+                                    <li><a class="cloud5" href="/tag/FingerText">FingerText</a></li>
+                                    <li><a class="cloud5" href="/tag/natepad++">natepad++</a></li>
+                                    <li><a class="cloud5" href="/tag/simpLESS">simpLESS</a></li>
+                                    <li><a class="cloud5" href="/tag/Preprocessor">Preprocessor</a></li>
+                                    <li><a class="cloud5" href="/tag/부트스트랩">부트스트랩</a></li>
+                                    <li><a class="cloud5" href="/tag/춘천%20여행코스">춘천 여행코스</a></li>
+                                    <li><a class="cloud5" href="/tag/강원%20창작개발센터">강원 창작개발센터</a></li>
+                                    <li><a class="cloud5" href="/tag/로보트체험관">로보트체험관</a></li>
+                                    <li><a class="cloud5" href="/tag/로보트박물관">로보트박물관</a></li>
+                                    <li><a class="cloud5" href="/tag/로봇체험관">로봇체험관</a></li>
+                                    <li><a class="cloud5" href="/tag/춘천레일바이크">춘천레일바이크</a></li>
+                                    <li><a class="cloud5" href="/tag/호반의%20도시">호반의 도시</a></li>
+                                    <li><a class="cloud5" href="/tag/소래포구항">소래포구항</a></li>
+                                    <li><a class="cloud5" href="/tag/FTP클라이언드">FTP클라이언드</a></li>
+                                    <li><a class="cloud5" href="/tag/FTP클라이언트">FTP클라이언트</a></li>
+                                    <li><a class="cloud5" href="/tag/이슬람의%20보물전">이슬람의 보물전</a></li>
+                                    <li><a class="cloud5" href="/tag/카프탄">카프탄</a></li>
+                                    <li><a class="cloud5" href="/tag/티라즈">티라즈</a></li>
+                                    <li><a class="cloud5" href="/tag/메가박스할인">메가박스할인</a></li>
+                                    <li><a class="cloud5" href="/tag/초특급블록버스터">초특급블록버스터</a></li>
+                                    <li><a class="cloud5" href="/tag/사라진동물을%20찾아서">사라진동물을 찾아서</a></li>
+                                    <li><a class="cloud5" href="/tag/세계동물대탐험전">세계동물대탐험전</a></li>
+                                    <li><a class="cloud5" href="/tag/height:100%25">height:100%</a></li>
+                                    <li><a class="cloud5" href="/tag/계족산%20황톳길">계족산 황톳길</a></li>
+                                    <li><a class="cloud5" href="/tag/메뉴만들기">메뉴만들기</a></li>
+                                    <li><a class="cloud5" href="/tag/정금호">정금호</a></li>
+                                    <li><a class="cloud5" href="/tag/시아도펜션">시아도펜션</a></li>
+                                    <li><a class="cloud5" href="/tag/시아도">시아도</a></li>
+                                    <li><a class="cloud5" href="/tag/웹%20콘텐츠%20접근성%20지침%202.0">웹 콘텐츠 접근성 지침 2.0</a></li>
+                                    <li><a class="cloud5" href="/tag/웹%20접근성을%20고려한%20콘텐츠%20제작%20기법">웹 접근성을 고려한 콘텐츠 제작 기법</a></li>
+                                    <li><a class="cloud5" href="/tag/WCAG%20Contrast%20checker">WCAG Contrast checker</a></li>
+                                    <li><a class="cloud5" href="/tag/Markup%20검증">Markup 검증</a></li>
+                                    <li><a class="cloud5" href="/tag/신세계백화점%209층">신세계백화점 9층</a></li>
+                                    <li><a class="cloud5" href="/tag/S가든">S가든</a></li>
+                                    <li><a class="cloud5" href="/tag/신세계백화점%20의정부점">신세계백화점 의정부점</a></li>
+                                    <li><a class="cloud5" href="/tag/잠진도%20선착장">잠진도 선착장</a></li>
+                                    <li><a class="cloud5" href="/tag/백두대간%20협곡열차">백두대간 협곡열차</a></li>
+                                    <li><a class="cloud5" href="/tag/중부내륙권%20관광열차">중부내륙권 관광열차</a></li>
+                                    <li><a class="cloud5" href="/tag/브이트레인">브이트레인</a></li>
+                                    <li><a class="cloud5" href="/tag/o-train">o-train</a></li>
+                                    <li><a class="cloud5" href="/tag/v-train">v-train</a></li>
+                                    <li><a class="cloud5" href="/tag/주민등록번호%20Clean%20center">주민등록번호 Clean center</a></li>
+                                    <li><a class="cloud5" href="/tag/웹%20접근성%20연구소">웹 접근성 연구소</a></li>
+                                    <li><a class="cloud5" href="/tag/한국웹접근성인증위원회">한국웹접근성인증위원회</a></li>
+                                    <li><a class="cloud5" href="/tag/웹발전연구소">웹발전연구소</a></li>
+                                    <li><a class="cloud5" href="/tag/한국웹접근성평가원">한국웹접근성평가원</a></li>
+                                    <li><a class="cloud5" href="/tag/웹%20접근성%20인증">웹 접근성 인증</a></li>
+                                    <li><a class="cloud5" href="/tag/다음랩">다음랩</a></li>
+                                    <li><a class="cloud5" href="/tag/투데이토렌트">투데이토렌트</a></li>
+                                    <li><a class="cloud5" href="/tag/졸라바다">졸라바다</a></li>
+                                    <li><a class="cloud5" href="/tag/파인드스토리">파인드스토리</a></li>
+                                    <li><a class="cloud5" href="/tag/토렌트바이">토렌트바이</a></li>
+                                    <li><a class="cloud5" href="/tag/비회원제%20토렌트">비회원제 토렌트</a></li>
+                                    <li><a class="cloud5" href="/tag/원조숯불닭갈비">원조숯불닭갈비</a></li>
+                                    <li><a class="cloud5" href="/tag/섬진강휴게소">섬진강휴게소</a></li>
+                                    <li><a class="cloud5" href="/tag/양산휴게소">양산휴게소</a></li>
+                                    <li><a class="cloud5" href="/tag/백양사휴게소">백양사휴게소</a></li>
+                                    <li><a class="cloud5" href="/tag/이천휴게소">이천휴게소</a></li>
+                                    <li><a class="cloud5" href="/tag/김병우">김병우</a></li>
+                                    <li><a class="cloud5" href="/tag/여행지%20찾기">여행지 찾기</a></li>
+                                    <li><a class="cloud5" href="/tag/내장소">내장소</a></li>
+                                    <li><a class="cloud5" href="/tag/오일무료교환">오일무료교환</a></li>
+                                    <li><a class="cloud5" href="/tag/카라이프%20엔진오일">카라이프 엔진오일</a></li>
+                                    <li><a class="cloud5" href="/tag/t%20carlife">t carlife</a></li>
+                                    <li><a class="cloud5" href="/tag/tcarlife">tcarlife</a></li>
+                                    <li><a class="cloud5" href="/tag/carlife">carlife</a></li>
+                                    <li><a class="cloud5" href="/tag/t%20carlife%20엔진오일">t carlife 엔진오일</a></li>
+                                    <li><a class="cloud5" href="/tag/다음뷰%20추천글">다음뷰 추천글</a></li>
+                                    <li><a class="cloud5" href="/tag/티스토리%20인기글">티스토리 인기글</a></li>
+                                    <li><a class="cloud5" href="/tag/다음뷰인기글">다음뷰인기글</a></li>
+                                    <li><a class="cloud5" href="/tag/다음뷰%20개편">다음뷰 개편</a></li>
+                                    <li><a class="cloud5" href="/tag/설국열차%20평점">설국열차 평점</a></li>
+                                    <li><a class="cloud5" href="/tag/간헐적%20단식%203가지">간헐적 단식 3가지</a></li>
+                                    <li><a class="cloud5" href="/tag/무료백신%20설치">무료백신 설치</a></li>
+                                    <li><a class="cloud5" href="/tag/토끼키우는법">토끼키우는법</a></li>
+                                    <li><a class="cloud5" href="/tag/토끼새끼%20출산">토끼새끼 출산</a></li>
+                                    <li><a class="cloud5" href="/tag/토끼%20출산">토끼 출산</a></li>
+                                    <li><a class="cloud5" href="/tag/토끼새끼">토끼새끼</a></li>
+                                    <li><a class="cloud5" href="/tag/어베스트%20라이선스">어베스트 라이선스</a></li>
+                                    <li><a class="cloud5" href="/tag/Avast%20라이선스">Avast 라이선스</a></li>
+                                    <li><a class="cloud5" href="/tag/무료%20안티바이러스">무료 안티바이러스</a></li>
+                                    <li><a class="cloud5" href="/tag/아베스트%20무료백신">아베스트 무료백신</a></li>
+                                    <li><a class="cloud5" href="/tag/정장교환권">정장교환권</a></li>
+                                    <li><a class="cloud5" href="/tag/의정부%20원조">의정부 원조</a></li>
+                                    <li><a class="cloud5" href="/tag/밀가마%20국시집">밀가마 국시집</a></li>
+                                    <li><a class="cloud5" href="/tag/밀가마">밀가마</a></li>
+                                    <li><a class="cloud5" href="/tag/국내%20백신">국내 백신</a></li>
+                                    <li><a class="cloud5" href="/tag/이미지CD">이미지CD</a></li>
+                                    <li><a class="cloud5" href="/tag/Giamo">Giamo</a></li>
+                                    <li><a class="cloud5" href="/tag/옥미정">옥미정</a></li>
+                                    <li><a class="cloud5" href="/tag/웹접근성%20검증">웹접근성 검증</a></li>
+                                    <li><a class="cloud5" href="/tag/Open%20WAX">Open WAX</a></li>
+                                    <li><a class="cloud5" href="/tag/N-WAX">N-WAX</a></li>
+                                    <li><a class="cloud5" href="/tag/원조오뎅식당">원조오뎅식당</a></li>
+                                    <li><a class="cloud5" href="/tag/유토렌트%20끊김현상">유토렌트 끊김현상</a></li>
+                                    <li><a class="cloud5" href="/tag/간헐적%20운동">간헐적 운동</a></li>
+                                    <li><a class="cloud5" href="/tag/5:2">5:2</a></li>
+                                    <li><a class="cloud5" href="/tag/타바타%20운동">타바타 운동</a></li>
+                                    <li><a class="cloud5" href="/tag/착한낙지%20가격">착한낙지 가격</a></li>
+                                    <li><a class="cloud5" href="/tag/착한낙지%20본점">착한낙지 본점</a></li>
+                                    <li><a class="cloud5" href="/tag/ani%20Gif">ani Gif</a></li>
+                                    <li><a class="cloud5" href="/tag/스트라이커%20유레카">스트라이커 유레카</a></li>
+                                    <li><a class="cloud5" href="/tag/집시%20데인저">집시 데인저</a></li>
+                                    <li><a class="cloud5" href="/tag/춘천%201.5닭갈비">춘천 1.5닭갈비</a></li>
+                                    <li><a class="cloud5" href="/tag/후평동%20닭갈비">후평동 닭갈비</a></li>
+                                    <li><a class="cloud5" href="/tag/일점오닭갈비">일점오닭갈비</a></li>
+                                    <li><a class="cloud5" href="/tag/1.5닭갈비%20본점">1.5닭갈비 본점</a></li>
+                                    <li><a class="cloud5" href="/tag/1.5닭갈비">1.5닭갈비</a></li>
+                                    <li><a class="cloud5" href="/tag/경기전%20안내판">경기전 안내판</a></li>
+                                    <li><a class="cloud5" href="/tag/경기전%20입장료">경기전 입장료</a></li>
+                                    <li><a class="cloud5" href="/tag/일락당">일락당</a></li>
+                                    <li><a class="cloud5" href="/tag/성심여자고등학교">성심여자고등학교</a></li>
+                                    <li><a class="cloud5" href="/tag/평화의광장">평화의광장</a></li>
+                                </s_tag_rep>
+                            </ul>
+                        </div>
+                    </s_tag>
+                    <s_paging>
+                        <div class="row">
+                            <div class="col-sm-7 col-md-8">
+                                <nav class="paging">
+                                    <ul class="pagination pagination-sm">
+                                        <li>
+                                            <a [##_prev_page_##] class="no-more-prev" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <s_paging_rep>
+                                            <li><a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a></li>
+                                        </s_paging_rep>
+                                        <li>
+                                            <a [##_next_page_##] class="no-more-next" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </s_paging>
+                    <!--</div>-->
+                    <!-- content end -->
+                </div>
+                <!-- 반응형 contaner 종료 -->
+                <div class="footer-recentContents">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4 ph15 recentPost">
+                                <!--내용 #1 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!-- 최근에 올라온 글 -->
+                                <div class="footer-title">
+                                    <i class="xi-comment xi-2x"></i>
+                                    <h5>최근에 올라온 글</h5>
+                                    <small>RECENT POSTS</small>
+                                </div>
+                                <ul class='list-group'>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries254"></span>
+                                        </span>
+                                        <a href="/254" class="truncation"> Alert창을 자유자재Alert창을 자유자재 </a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries253"></span>
+                                        </span>
+                                        <a href="/253" class="truncation"> 차트를 만들어주는 차트를 만들어주는차트를 만들어주는</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries252">2334</span>
+                                        </span>
+                                        <a href="/252" class="truncation"> 문서 로딩을 보여주 문서 로딩을 보여주</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries251">54</span>
+                                        </span>
+                                        <a href="/251" class="truncation"> 미니그래프를 만들미니그래프를 만들 차트를 만들어주는</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries250">321</span>
+                                        </span>
+                                        <a href="/250" class="truncation"> 스크롤을 만들어주 스크롤을 만들어주</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class="badge">
+                                            <span id="commentCountOnRecentEntries252">23</span>
+                                        </span>
+                                        <a href="/252" class="truncation"> 문서 로딩을 보여주 문서 로딩을 보여주</a>
+                                    </li>
+                                </ul>
+                                <!--내용 #1 끝-->
+                            </div>
+                            <div class="col-xs-12 col-md-4 ph15 recentComments">
+                                <!--내용 #2 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!-- 최근에 달린 댓글 -->
+                                <div class="footer-title">
+                                    <i class="xi-message-o xi-2x"></i>
+                                    <h5>최근에 달린 댓글</h5>
+                                    <small>RECENT COMMENTS</small>
+                                </div>
+                                <ul class='list-group'>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'>03.10</span>
+                                        <span class='badge'>swansy</span>
+                                        <a href="/111#comment10900802" class='truncation'>진짜 너무 감사합니 너무 감사합니 너무 감사합니</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'>02.17</span>
+                                        <span class='badge'>조's</span>
+                                        <a href="/111#comment10887234" class='truncation'>네.. 너무 감사합니너무 감사합니 감사합니다.</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'></span>
+                                        <span class='badge'>themoonsong</span>
+                                        <a href="/111#comment10886981" class='truncation'>검색으로 알게 되었 알게 되었어요</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'>02.16</span>
+                                        <span class='badge'></span>
+                                        <a href="/111#comment10886981" class='truncation'>검색으로 알게 되었 알게 되었어요.</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'>02.19</span>
+                                        <span class='badge'>조's</span>
+                                        <a href="/170#comment10877618" class='truncation'>너무 감사합니너무 감사합니 감사합니다</a>
+                                    </li>
+                                    <li class='list-group-item'>
+                                        <span class='badge date'>03.19</span>
+                                        <span class='badge'>swansy</span>
+                                        <a href="/111#comment10900802" class='truncation'>진짜 너무 감사합니 너무 감사합니 너무 감사합니</a>
+                                    </li>
+                                </ul>
+                                <!--내용 #2 끝-->
+                            </div>
+                            <div class="col-xs-12 col-md-4 etcArea1">
+                                <!--추가내용 #3 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!-- 구글 광고 -->
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- 반응형광고_1 -->
+                                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8112608132706874" data-ad-slot="6259454087" data-ad-format="auto"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                                <!--추가내용 #3 끝-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4 etcArea2">
+                                <!--추가내용 #4 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!--추가내용 #4 끝 -->
+                            </div>
+                            <!-- My LINK -->
+                            <div class="col-xs-12 col-md-4  ph15 mt5 myLink">
+                                <!--추가내용 #5 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!-- MY링크 -->
+                                <div class="footer-title">
+                                    <i class="xi-link xi-2x"></i>
+                                    <h5>MY링크</h5>
+                                    <small>MY LINK</small>
+                                </div>
+                                <ul class='list-unstyled'>
+                                    <li><a href="[##_link_url_##]">한마루 집</a></li>
+                                    <li><a href="[##_link_url_##]">우족이 좋아</a></li>
+                                    <li><a href="[##_link_url_##]">니친구내친구</a></li>
+                                    <li><a href="[##_link_url_##]">엄마는 내가 제일 이쁘데</a></li>
+                                    <li><a href="[##_link_url_##]">그렇수는 없는거야</a></li>
+                                </ul>
+                                <!--추가내용 #5 끝 -->
+                            </div>
+                            <div class="col-xs-12 col-md-4 ph15 mt5 counterBox">
+                                <!--추가내용 #6 시작 (아래의 내용을 원하시는 것으로 교체하세요 )-->
+                                <!-- 방문자수 -->
+                                <div class="footer-title">
+                                    <i class="xi-sun-o xi-2x"></i>
+                                    <h5>방문자수</h5>
+                                    <small>COUNTER</small>
+                                </div>
+                                <div class="counter">
+                                    <div class="today">Today
+                                        <span class="cnt">3,454,141</span>
+                                    </div>
+                                    <div class="yesterday">Yesterday
+                                        <span class="cnt">244</span>
+                                    </div>
+                                    <div class="total">Total
+                                        <span class="cnt">546,434,123,454,141</span>
+                                    </div>
+                                </div>
+                                <!--추가내용 #6 끝 -->
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7 col-md-8">
+                                <a href="http://localhost:9100">길동이</a>’s Blog is</span>
+                                </a> Designed by <a href="http://uxgjs.tistory.com " onclick="window.open(this.href); return false ">UX공작소</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="# " class="btn_top ">
+                        <i class="xi-angle-up ">
+                            <span class="blind ">위로가기</span>
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <!-- container close -->
+        </s_t3>
+        <script src="./images/vendor.js"></script>
+        <!--코드 하이라이트 시작-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!--코드 하이라이트 끝-->
+        <script src="./images/script.js"></script>
+        <!-- build:remove -->
+        <script src="./images/temp.js"></script>
+        <!-- /build -->
+    </body>
+</html>

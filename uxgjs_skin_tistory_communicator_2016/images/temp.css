@@ -1,0 +1,49 @@
+.navbar-fixed-top {
+  top: 3rem !important;
+}
+#sidebar {
+  top: 8rem !important;
+}
+#doc-top-nav {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background: #333;
+}
+#doc-top-nav a {
+  margin-right: 1rem;
+  color: #ddd;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+#doc-top-nav a:hover {
+  color: #fff;
+}
+#doc-top-nav .title {
+  float: left;
+  padding: 0;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  color: #ddd;
+}
+#doc-top-nav .theme {
+  margin-right: 1rem;
+  position: relative;
+}
+#doc-top-nav .theme li a {
+  color: #454545;
+  margin-right: 0;
+}
+#doc-top-nav .theme li a:hover {
+  color: #000;
+}
+#doc-top-nav .theme button {
+  vertical-align: top;
+  margin-top: 0.4rem;
+  line-height: 1.3;
+}
