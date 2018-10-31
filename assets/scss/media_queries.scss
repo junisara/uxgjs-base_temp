@@ -1,0 +1,13 @@
+/*////////////////////////////////////////////////////////////////////
+//
+// 내용 : 모바일화면일 경우 적용될 SCSS
+//
+////////////////////////////////////////////////////////////////////*/
+
+@include media-breakpoint-down(sm) {
+  // xs보다 작은 화면 적용
+
+}
+// @include media-breakpoint-down(sm) { ... }
+// @include media-breakpoint-down(md) { ... }
+// @include media-breakpoint-down(lg) { ... }

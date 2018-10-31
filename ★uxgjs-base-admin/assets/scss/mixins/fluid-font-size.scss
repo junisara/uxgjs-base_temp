@@ -1,0 +1,144 @@
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+
+// 설명   : 브라우저 크기에 따라 자동으로 글자의 크기가 최적화 되어 보이게 함
+// 사용법 :  @include fluid-font-size(576px, 1200px, 14px, 18px);
+
+@mixin fluid-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// $baseline: 1.5rem;
+
+// $minScreen: 20rem;
+// $maxScreen: 50rem;
+// $minFont: .8rem;
+// $maxFont: 2rem;
+
+// $h1: 2rem;
+// $h2: 1.5rem;
+// $h3: 1.25rem;
+// $h4: 1rem;
+// $h5: .875rem;
+
+
+// @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+// 	& {
+// 		@each $property in $properties {
+// 			#{$property}: $min-value;
+// 		}
+
+// 		@media screen and (min-width: $min-vw) {
+// 			@each $property in $properties {
+// 				#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+// 			}
+// 		}
+
+// 		@media screen and (min-width: $max-vw) {
+// 			@each $property in $properties {
+// 				#{$property}: $max-value;
+// 			}
+// 		}
+// 	}
+// }
+
+// @function strip-unit($value) {
+// 	@return $value / ($value * 0 + 1);
+// }
+
+
+
+
+// *{
+// 	box-sizing: border-box;
+// }
+
+// html {
+// 	box-sizing: border-box;
+// 	height: 100%;
+// 	font-smoothing: antialiased;
+// 	text-rendering: optimizeLegibility;
+// 	@include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
+// }
+
+// body {
+// 	line-height: $baseline;
+// 	padding: $baseline 0;
+// 	margin: 0 auto;  
+// 	background-image: linear-gradient(rgba(200, 50, 50, .25) 1px, transparent 1px);
+// 	background-size: 1px $baseline;
+// 	width: 22rem;
+// }
+
+// p{	
+// 	line-height: $baseline;
+// 	margin-bottom: $baseline;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5{
+// 	font-weight: 700;
+// 	margin-bottom: $baseline;
+// }
+
+// h1 {
+// 	font-size: 2rem;
+// 	line-height: $h1;
+// 	margin-top: calc((#{$baseline} - #{$h1}) + #{$baseline});
+// }
+
+// h2 {
+// 	font-size: $h2;
+// 	line-height: $h2;
+// 	margin-top: calc((#{$baseline} - #{$h2}) + #{$baseline}*2);
+// }
+
+// h3 {
+// 	font-size: $h3;
+// 	line-height: $h3;
+// 	margin-top: calc((#{$baseline} - #{$h3}) + #{$baseline}*2);
+// }
+
+// h4 {
+// 	font-size: $h4;
+// 	line-height: $h4;
+// 	margin-top: calc((#{$baseline} - #{$h4}) + #{$baseline}*2);
+// }
+
+// h5 {
+// 	font-size: $h5;
+// 	line-height: $h5;
+// 	margin-top: calc((#{$baseline} - #{$h5}) + #{$baseline}*2);
+// }
+
